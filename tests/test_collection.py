@@ -514,3 +514,32 @@ class TestVisionScope(unittest.TestCase):
             for tag in spec["items"]["enum"]:
                 self.assertTrue(vocab.is_valid(facet, tag),
                                 "{}/{} is not in the vocabulary".format(facet, tag))
+
+
+class TestRebuildKeepsArtTags(unittest.TestCase):
+    """A rebuild must not quietly drop 90% of the collection's art tags."""
+
+    def test_rebuild_restores_scryfall_tags_from_the_cache(self):
+        with Sandbox() as box:
+            conn = box.conn()
+            importer.run_import(conn, box.csv(), offline=True, log=lambda *a: None)
+            art = conn.execute(
+                "SELECT illustration_id FROM card_faces WHERE scryfall_id = ?",
+                (STUDY,)).fetchone()["illustration_id"]
+            scryfall_tags.save_cache({"cat": [art]})
+            scryfall_tags.apply(conn, scryfall_tags.load_cache())
+            self.assertEqual(len(search.find(conn, tags=["cat"])), 1)
+            conn.close()
+
+            os.remove(paths.DB)
+            fresh = box.conn()
+            importer.run_import(fresh, os.path.join(
+                paths.SNAPSHOTS, sorted(os.listdir(paths.SNAPSHOTS))[0]),
+                offline=True, log=lambda *a: None)
+            scryfall_tags.apply(fresh, scryfall_tags.load_cache())
+            self.assertEqual(len(search.find(fresh, tags=["cat"])), 1)
+
+    def test_the_cache_path_follows_the_configured_data_directory(self):
+        """Guards the import-time-constant bug: tests must not write to the repo."""
+        with Sandbox() as box:
+            self.assertTrue(scryfall_tags.cache_path().startswith(box.dir))

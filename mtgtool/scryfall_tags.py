@@ -36,7 +36,14 @@ HEADERS = {"User-Agent": USER_AGENT, "Accept": "application/json"}
 # bursts harder than that. Measured: 0.12s dies after ~30 tags.
 PAGE_DELAY_S = 0.30
 TAG_DELAY_S = 0.30
-CACHE = os.path.join(paths.SCRYFALL, "art_tags.json")
+def cache_path() -> str:
+    """Resolved on each call, not at import.
+
+    A module-level constant would freeze the path at import time and ignore any
+    later change to `paths` -- which would silently write test data into the real
+    repository.
+    """
+    return os.path.join(paths.SCRYFALL, "art_tags.json")
 
 
 class Throttled(Exception):
@@ -93,7 +100,7 @@ def illustrations_for_tag(tag: str, page_cap: int = 200) -> Set[str]:
 
 
 def load_cache(path: str = None) -> Dict[str, List[str]]:
-    path = path or CACHE
+    path = path or cache_path()
     if not os.path.exists(path):
         return {}
     with open(path, "r", encoding="utf-8") as fh:
@@ -101,7 +108,7 @@ def load_cache(path: str = None) -> Dict[str, List[str]]:
 
 
 def save_cache(data: Dict[str, List[str]], path: str = None) -> None:
-    path = path or CACHE
+    path = path or cache_path()
     paths.ensure_dirs()
     tmp = path + ".tmp"
     with open(tmp, "w", encoding="utf-8") as fh:

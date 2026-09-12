@@ -293,10 +293,21 @@ def cmd_rebuild(args, conn):
         importer.run_import(fresh, os.path.join(paths.SNAPSHOTS, name),
                             allow_proxy_conflicts=True, log=lambda *a: None)
     decks.sync_to_db(fresh)
-    count = tagging.resync_from_file(fresh)
+    vision_tags = tagging.resync_from_file(fresh)
+
+    # Scryfall Tagger data is a cache of a public API rather than a text input,
+    # so it must be re-applied explicitly. Leaving it out would make `rebuild`
+    # quietly drop 90% of the collection's art tags.
+    art_cache = scryfall_tags.load_cache()
+    art = scryfall_tags.apply(fresh, art_cache) if art_cache else {"tags": 0}
+    if not art_cache:
+        print("  no Scryfall Tagger cache found -- run `mtg arttags` to restore "
+              "community art tags")
+
     print()
-    print("Rebuilt from {} snapshot(s), {} deck file(s) and {} art tag(s).".format(
-        len(snapshots), len(decks.load_all()), count))
+    print("Rebuilt from {} snapshot(s), {} deck file(s), {} vision tag(s) and "
+          "{} Scryfall art tag(s).".format(
+              len(snapshots), len(decks.load_all()), vision_tags, art["tags"]))
 
 
 def cmd_gallery(args, conn):
