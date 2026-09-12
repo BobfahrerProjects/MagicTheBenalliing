@@ -1,0 +1,38 @@
+1 Court of Grace (SLD) 2685
+1 Queen Marchesa (SLD) 2688
+1 Seize the Spoils (SOS) 129
+1 The One Ring (LTR) 246
+2 Ajani's Response (SOS) 6
+3 Bitter Triumph (SOA) 26
+1 Chaos Warp (SLD) 2692
+1 Erode (SOS) 15
+1 Harsh Annotation (SOS) 18
+1 Path to Exile (SOC) 159
+1 Sheltered by Ghosts (SLD) 2653
+1 Sheoldred's Edict (SOA) 97
+1 Sheoldred's Edict (SOA) 32
+3 Swords to Plowshares (SOC) 179
+1 Fell the Mighty (SLD) 2690
+1 Settle the Wreckage (HOB) 26
+2 Starfall Invocation (BLB) 34
+1 Ghostly Prison (CHK) 10
+1 Windborn Muse (SLD) 2687
+2 Antiquities on the Loose (SOS) 7
+1 Felidar Sovereign (SLD) 1182
+1 Glittering Lion (PCY) 10
+2 Inkling Mascot (SOS) 196
+1 Spirit of the Hearth (SLD) 2654
+2 Spiritcall Enthusiast // Scrollboost (SOS) 33
+1 Zoraline, Cosmos Caller (BLB) 242
+1 Arid Mesa (MH2) 244
+2 Blood Crypt (ECL) 262
+1 City of Brass (2X2) 321
+4 Godless Shrine (EOE) 254
+1 Mana Confluence (JOU) 163
+2 Marsh Flats (MH2) 248
+1 Mountain (JVC) 62
+5 Plains (MRD) 287
+2 Sacred Foundry (EOE) 256
+2 Savai Triome (IKO) 253
+2 Shattered Sanctum (SOS) 303
+2 Swamp (MRD) 296
