@@ -1,0 +1,395 @@
+{
+  "deck_id": "mardu-cats",
+  "name": "Her Majesty's Cats",
+  "format": "standard",
+  "commander_scryfall_id": null,
+  "manabox_binder": "Her Majesty's Cats",
+  "status": "building",
+  "excluded_binders": [
+    "Necron Dynasties",
+    "Commander Hazel"
+  ],
+  "notes": "60-card Mardu monarch control, built for 1v1 out of binder stock only. Cards marked status=proxy come from the Proxies binder and consume no real copy. Verify with tools/verify_deck.py before playing it.",
+  "cards": [
+    {
+      "oracle_id": "b1544f21-7e98-461b-aed5-e748b0168c52",
+      "name": "Swords to Plowshares",
+      "scryfall_id": "68ec2aed-7662-48ae-ab25-04f74ece1e41",
+      "set": "soc",
+      "number": "179",
+      "quantity": 3,
+      "role": "removal",
+      "status": "proxy"
+    },
+    {
+      "oracle_id": "d683d985-9888-4d21-8b5f-69e69ce4a03b",
+      "name": "Path to Exile",
+      "scryfall_id": "90b690f4-9647-4e67-b7cb-b2692ea149b1",
+      "set": "soc",
+      "number": "159",
+      "quantity": 1,
+      "role": "removal",
+      "status": "proxy"
+    },
+    {
+      "oracle_id": "2e467fab-e808-44d3-99bf-e3621baeb7cb",
+      "name": "Erode",
+      "scryfall_id": "32e670da-7563-4f6a-a7db-4c126a440eb8",
+      "set": "sos",
+      "number": "15",
+      "quantity": 1,
+      "role": "removal",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "776341cb-d2ec-423f-9250-92dc8bd8d503",
+      "name": "Bitter Triumph",
+      "scryfall_id": "db465858-0593-4850-8f1d-400fe230a18d",
+      "set": "soa",
+      "number": "26",
+      "quantity": 3,
+      "role": "removal",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "217062f5-96f1-454c-9507-17f34ef37070",
+      "name": "Sheoldred's Edict",
+      "scryfall_id": "9070d77d-4a41-4f22-9579-06a7db5a520e",
+      "set": "soa",
+      "number": "97",
+      "quantity": 1,
+      "role": "removal",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "217062f5-96f1-454c-9507-17f34ef37070",
+      "name": "Sheoldred's Edict",
+      "scryfall_id": "dca66a1b-0acd-4b79-b5fe-16f2930f9c1b",
+      "set": "soa",
+      "number": "32",
+      "quantity": 1,
+      "role": "removal",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "1657be64-b38f-4074-a743-bf558dc57901",
+      "name": "Harsh Annotation",
+      "scryfall_id": "e07a8fc7-c11c-4469-a31d-0abf40e57bbf",
+      "set": "sos",
+      "number": "18",
+      "quantity": 1,
+      "role": "removal",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "d13fc657-c6fc-4394-bc70-691050550226",
+      "name": "Sheltered by Ghosts",
+      "scryfall_id": "da7c29a0-5512-4188-acbc-af5f9194f264",
+      "set": "sld",
+      "number": "2653",
+      "quantity": 1,
+      "role": "removal",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "0f0959ff-4464-4738-9d79-5b06f368f144",
+      "name": "Inkling Mascot",
+      "scryfall_id": "6d4a2f39-0e1e-4076-815a-2676a09a1aab",
+      "set": "sos",
+      "number": "196",
+      "quantity": 2,
+      "role": "creature",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "07a0cba9-8768-4fd9-a3d5-b0f83b4bf8e8",
+      "name": "Chaos Warp",
+      "scryfall_id": "4f694292-3a9d-4d65-8917-d70a9efd3a88",
+      "set": "sld",
+      "number": "2692",
+      "quantity": 1,
+      "role": "removal",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "e828b189-0e8f-43b8-b909-4c23e742e028",
+      "name": "Ghostly Prison",
+      "scryfall_id": "82d7de2b-c909-48dc-9ab7-c4a8328e37bb",
+      "set": "chk",
+      "number": "10",
+      "quantity": 1,
+      "role": "tax",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "549e6de7-56e9-4f5c-8c88-30e446bc53bb",
+      "name": "Glittering Lion",
+      "scryfall_id": "ab4be296-33a6-46b1-9748-5b0d335f40ee",
+      "set": "pcy",
+      "number": "10",
+      "quantity": 1,
+      "role": "creature",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "5a775f50-20f8-4a8f-868c-8907305bfad6",
+      "name": "Zoraline, Cosmos Caller",
+      "scryfall_id": "b7f99fd5-5298-4b27-923d-9d31203c931a",
+      "set": "blb",
+      "number": "242",
+      "quantity": 1,
+      "role": "creature",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "9c45682f-48b5-4e58-9277-ff4211f389ae",
+      "name": "Antiquities on the Loose",
+      "scryfall_id": "68ee92cd-51af-4de5-bcc8-34d0bb2fd398",
+      "set": "sos",
+      "number": "7",
+      "quantity": 2,
+      "role": "creature",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "c77ddcac-ce54-4348-bde2-5d9caf3d5b04",
+      "name": "Spiritcall Enthusiast // Scrollboost",
+      "scryfall_id": "c0b85569-2cb3-4b64-b0fe-418195c4dab0",
+      "set": "sos",
+      "number": "33",
+      "quantity": 2,
+      "role": "creature",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "58f83528-9110-4895-b5ea-51b90af30a8d",
+      "name": "Seize the Spoils",
+      "scryfall_id": "4ddf4e34-a1f9-4636-942d-0a08e9f94320",
+      "set": "sos",
+      "number": "129",
+      "quantity": 1,
+      "role": "draw",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "d7ac4be1-dcca-49b6-8ddb-d1b0e6cf2dcf",
+      "name": "Queen Marchesa",
+      "scryfall_id": "25929dd3-f4d5-4888-ba2f-389950960f86",
+      "set": "sld",
+      "number": "2688",
+      "quantity": 1,
+      "role": "monarch",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "f63c2438-27d4-449a-828f-f0a2ea86ff16",
+      "name": "Court of Grace",
+      "scryfall_id": "98292e80-3e4d-4da6-8e97-13c003c635da",
+      "set": "sld",
+      "number": "2685",
+      "quantity": 1,
+      "role": "monarch",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "3aa83ed2-f48b-4ce6-a614-2c54ddf50538",
+      "name": "The One Ring",
+      "scryfall_id": "d5806e68-1054-458e-866d-1f2470f682b2",
+      "set": "ltr",
+      "number": "246",
+      "quantity": 1,
+      "role": "draw",
+      "status": "proxy"
+    },
+    {
+      "oracle_id": "75e09ac6-d789-4c4d-9aca-845d68f3899f",
+      "name": "Windborn Muse",
+      "scryfall_id": "85fb2d7f-0ae4-47cd-a930-ba46757a2430",
+      "set": "sld",
+      "number": "2687",
+      "quantity": 1,
+      "role": "tax",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "2a2ea189-b663-4f4a-bb23-ff7a4af25f71",
+      "name": "Settle the Wreckage",
+      "scryfall_id": "31a7a5e2-4cb8-48fc-8351-18344b4a7560",
+      "set": "hob",
+      "number": "26",
+      "quantity": 1,
+      "role": "sweeper",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "bf7ec320-64bb-46ca-aac0-ca3d4224b69e",
+      "name": "Ajani's Response",
+      "scryfall_id": "9cd1417a-badc-4abd-a8ca-5b31f85c1072",
+      "set": "sos",
+      "number": "6",
+      "quantity": 2,
+      "role": "removal",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "7024532b-f99b-43a7-b0ed-5b3e7ec7592b",
+      "name": "Starfall Invocation",
+      "scryfall_id": "2aea38e6-ec58-4091-b27c-2761bdd12b13",
+      "set": "blb",
+      "number": "34",
+      "quantity": 2,
+      "role": "sweeper",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "1fbb2a7c-8093-4729-b8fe-cf032d99470f",
+      "name": "Fell the Mighty",
+      "scryfall_id": "0cdf4215-0867-47d8-ae61-0da2af542d7b",
+      "set": "sld",
+      "number": "2690",
+      "quantity": 1,
+      "role": "sweeper",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "30cd69a8-7893-4075-94ca-04450ff821d3",
+      "name": "Spirit of the Hearth",
+      "scryfall_id": "263357fd-4c2e-40ff-b952-e899609e1890",
+      "set": "sld",
+      "number": "2654",
+      "quantity": 1,
+      "role": "creature",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "5ae3cbb9-9f0c-4077-ae7c-fba660d7fb4b",
+      "name": "Felidar Sovereign",
+      "scryfall_id": "b7138e87-9a3c-4031-8c87-d3630c89e88c",
+      "set": "sld",
+      "number": "1182",
+      "quantity": 1,
+      "role": "creature",
+      "status": "proxy"
+    },
+    {
+      "oracle_id": "73864fcc-1bde-4bc0-831e-2b93e546e417",
+      "name": "Godless Shrine",
+      "scryfall_id": "8c542ea4-98c3-4c2d-9066-205ab7aa697a",
+      "set": "eoe",
+      "number": "254",
+      "quantity": 4,
+      "role": "land",
+      "status": "proxy"
+    },
+    {
+      "oracle_id": "45181cb8-2090-4471-ba90-e5a8f04d525f",
+      "name": "Sacred Foundry",
+      "scryfall_id": "8b4e2642-3c87-4708-b9b4-2e7f7359ac7d",
+      "set": "eoe",
+      "number": "256",
+      "quantity": 2,
+      "role": "land",
+      "status": "proxy"
+    },
+    {
+      "oracle_id": "43985bbc-a0f6-4812-984e-392bc8562633",
+      "name": "Blood Crypt",
+      "scryfall_id": "6da63cc5-4624-4491-abd9-9b600c3fefe2",
+      "set": "ecl",
+      "number": "262",
+      "quantity": 2,
+      "role": "land",
+      "status": "proxy"
+    },
+    {
+      "oracle_id": "00625242-9348-4ef4-b975-f2ac82fee21d",
+      "name": "Savai Triome",
+      "scryfall_id": "748e6a61-9c1f-4225-9f04-e54002f63ac3",
+      "set": "iko",
+      "number": "253",
+      "quantity": 2,
+      "role": "land",
+      "status": "proxy"
+    },
+    {
+      "oracle_id": "c854ecb0-cc60-4c48-a9aa-7f2348a7a8c6",
+      "name": "Shattered Sanctum",
+      "scryfall_id": "cfc3f81d-333f-4ac9-8374-082675e07ac1",
+      "set": "sos",
+      "number": "303",
+      "quantity": 2,
+      "role": "land",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "dab520d0-20b4-4273-ba6b-eb07f85ea433",
+      "name": "Marsh Flats",
+      "scryfall_id": "9db3ba6d-eb7f-4f5b-9a3b-c6239c3baa42",
+      "set": "mh2",
+      "number": "248",
+      "quantity": 2,
+      "role": "land",
+      "status": "proxy"
+    },
+    {
+      "oracle_id": "c5acf2a5-40f4-433d-a74d-1cb56c521464",
+      "name": "Arid Mesa",
+      "scryfall_id": "25ac5405-df7b-4097-914a-022cb18e20d4",
+      "set": "mh2",
+      "number": "244",
+      "quantity": 1,
+      "role": "land",
+      "status": "proxy"
+    },
+    {
+      "oracle_id": "f25351e3-539b-4bbc-b92d-6480acf4d722",
+      "name": "City of Brass",
+      "scryfall_id": "bed4a63d-632a-4a3a-b35f-f8e155237d27",
+      "set": "2x2",
+      "number": "321",
+      "quantity": 1,
+      "role": "land",
+      "status": "proxy"
+    },
+    {
+      "oracle_id": "d0ee5bdc-2b69-4b73-9a20-ffcc18783b29",
+      "name": "Mana Confluence",
+      "scryfall_id": "504a69eb-3c2d-4bb1-b117-252b15acf0c2",
+      "set": "jou",
+      "number": "163",
+      "quantity": 1,
+      "role": "land",
+      "status": "proxy"
+    },
+    {
+      "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+      "name": "Plains",
+      "scryfall_id": "5bac2d0d-43db-41f7-99dd-9ff55a4f2b3b",
+      "set": "mrd",
+      "number": "287",
+      "quantity": 5,
+      "role": "land",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+      "name": "Swamp",
+      "scryfall_id": "45927890-52ef-448c-b302-4192afa27a04",
+      "set": "mrd",
+      "number": "296",
+      "quantity": 2,
+      "role": "land",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+      "name": "Mountain",
+      "scryfall_id": "899ee6f6-4aad-4093-b1ef-7e2ec2b78df8",
+      "set": "jvc",
+      "number": "62",
+      "quantity": 1,
+      "role": "land",
+      "status": "assigned"
+    }
+  ]
+}
