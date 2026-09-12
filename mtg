@@ -1,0 +1,404 @@
+#!/usr/bin/env python3
+"""mtg -- Magic collection and deck-building manager.
+
+Everything except `tag --submit/--collect` runs offline and costs nothing.
+"""
+from __future__ import annotations
+
+import argparse
+import os
+import sys
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+
+from mtgtool import (db, decks, gallery, identity, importer, invariants,  # noqa: E402
+                     manabox, paths, search, tagging, value)
+
+
+def die(message: str, code: int = 2):
+    print("error: {}".format(message), file=sys.stderr)
+    raise SystemExit(code)
+
+
+def resolve_card(conn, name: str, set_code: str = "", number: str = ""):
+    """Name -> exactly one printing, refusing to guess.
+
+    With --set/--number the human has already disambiguated. Without them, an
+    ambiguous name is an error that lists the alternatives; it is never resolved
+    by picking the first match.
+    """
+    if set_code or number:
+        matches = [c for c in identity.candidates(conn, name)
+                   if (not set_code or c.set_code.lower() == set_code.lower())
+                   and (not number or c.collector_number == number)]
+        if len(matches) == 1:
+            return matches[0]
+        if not matches:
+            die("no printing of {!r} matches set={!r} number={!r}".format(
+                name, set_code, number))
+        die("{!r} still matches {} printings; give both --set and --number"
+            .format(name, len(matches)))
+    try:
+        return identity.resolve(conn, name)
+    except (identity.AmbiguousCard, identity.UnknownCard) as exc:
+        die(str(exc))
+
+
+# ---- commands ----
+
+def cmd_import(args, conn):
+    try:
+        result = importer.run_import(
+            conn, args.csv, allow_proxy_conflicts=args.allow_proxy_conflicts,
+            offline=args.offline)
+    except (importer.ImportBlocked, manabox.ManaBoxFormatError) as exc:
+        die(str(exc))
+
+    print()
+    changes = result["changes"]
+    if result["previous_id"] is None:
+        print("First snapshot -- nothing to compare against yet.")
+    elif not changes:
+        print("No change since the previous export.")
+    else:
+        summary = importer.summarise(changes)
+        print("CHANGES SINCE THE PREVIOUS EXPORT")
+        for kind in ("added", "removed", "qty_up", "qty_down", "moved"):
+            if kind in summary:
+                print("  {:<10s} {:>5d} cards".format(kind, summary[kind]))
+        print()
+        for change in changes[:args.detail]:
+            row = conn.execute("SELECT name, set_code FROM cards WHERE scryfall_id = ?",
+                               (change["scryfall_id"],)).fetchone()
+            label = "{} ({})".format(row["name"], (row["set_code"] or "").upper()) \
+                if row else change["scryfall_id"]
+            if change["change_type"] == "moved":
+                where = "{} -> {}".format(change["binder_from"], change["binder_to"])
+            else:
+                where = change["binder_to"] or change["binder_from"] or ""
+            print("  {:<9s} {}x {:<34s} {}".format(
+                change["change_type"], change["qty_delta"], label[:34], where))
+        if len(changes) > args.detail:
+            print("  ... and {} more (use --detail N)".format(len(changes) - args.detail))
+
+    print()
+    print("{:,} lots, {:,} cards, {} free metadata tags.".format(
+        result["lots"], result["cards"], result["metadata_tags"]))
+
+    pending = len(tagging.untagged(conn))
+    if pending:
+        print("{:,} artwork(s) have no art tags yet -- run `mtg tag --dry-run`."
+              .format(pending))
+
+
+def cmd_value(args, conn):
+    print(value.format_report(value.value_collection(conn, usd_rate=args.usd_rate)))
+
+
+def cmd_find(args, conn):
+    hits = search.find(conn, tags=args.tag, text=" ".join(args.text),
+                       colors=args.colors, type_contains=args.type,
+                       available_only=args.available,
+                       include_proxies=not args.no_proxies)
+    print(search.format_hits(hits, limit=args.limit))
+
+
+def cmd_tag(args, conn):
+    if args.resync:
+        count = tagging.resync_from_file(conn)
+        print("Reloaded {} vision tag(s) from {}.".format(
+            count, os.path.relpath(paths.ART_TAGS, paths.ROOT)))
+        return
+
+    if args.status:
+        if not args.batch:
+            die("--status needs --batch <id>")
+        print(tagging.status(args.batch))
+        return
+
+    if args.collect:
+        counts = tagging.collect(conn, args.batch)
+        print("Collected: {succeeded} succeeded, {errored} errored, {other} other."
+              .format(**counts))
+        return
+
+    units = tagging.untagged(conn, limit=args.limit)
+    if args.submit:
+        if not units:
+            print("Nothing to tag.")
+            return
+        estimate = tagging.estimate(len(units))
+        print(tagging.format_estimate(estimate))
+        print()
+        answer = input("Submit this batch? [y/N] ").strip().lower()
+        if answer not in ("y", "yes"):
+            print("Not submitted.")
+            return
+        batch_id = tagging.submit(conn, units, embed=args.embed)
+        print("Submitted batch {} ({} artworks).".format(batch_id, len(units)))
+        print("Check with:  ./mtg tag --status --batch {}".format(batch_id))
+        print("Collect with: ./mtg tag --collect")
+        return
+
+    print(tagging.format_estimate(tagging.estimate(len(units))))
+    if units:
+        print()
+        print("First few queued:")
+        for unit in units[:8]:
+            print("  {}".format(unit.example_card))
+
+
+def cmd_deck(args, conn):
+    action = args.action
+
+    if action == "seed":
+        made = decks.seed_from_snapshot(conn, overwrite=args.overwrite)
+        decks.sync_to_db(conn)
+        if not made:
+            print("Nothing seeded (deck files already exist; --overwrite to replace).")
+        for deck in made:
+            print("  seeded {:<26s} {} cards".format(deck.name, deck.total_cards))
+        return
+
+    if action == "list":
+        loaded = decks.load_all()
+        if not loaded:
+            print("No decks yet. `mtg deck seed` imports the ones in ManaBox.")
+            return
+        for deck in loaded:
+            counts = {}
+            for card in deck.cards:
+                counts[card.status] = counts.get(card.status, 0) + card.quantity
+            detail = ", ".join("{} {}".format(v, k) for k, v in sorted(counts.items()))
+            print("  {:<14s} {:<26s} {:>3d} cards   {}".format(
+                deck.deck_id, deck.name, deck.total_cards, detail))
+        return
+
+    if action == "new":
+        deck = decks.create(" ".join(args.rest), binder=args.binder)
+        print("Created {} at {}".format(
+            deck.name, os.path.relpath(deck.path(), paths.ROOT)))
+        return
+
+    if action == "conflicts":
+        print(decks.format_contentions(decks.contentions(conn)))
+        return
+
+    if not args.rest and action in ("show", "add", "remove", "export"):
+        die("`mtg deck {}` needs a deck id (see `mtg deck list`)".format(action))
+
+    deck_id = args.rest[0]
+    try:
+        deck = decks.load(deck_id)
+    except decks.DeckError as exc:
+        die(str(exc))
+
+    if action == "show":
+        print("{}  [{}]  {} cards".format(deck.name, deck.fmt, deck.total_cards))
+        if deck.notes:
+            print("  {}".format(deck.notes))
+        print()
+        for card in sorted(deck.cards, key=lambda c: c.name):
+            flag = "" if card.status == "assigned" else "  <{}>".format(card.status)
+            print("  {}x {} ({}) {}{}".format(
+                card.quantity, card.name, (card.set_code or "").upper(),
+                card.collector_number, flag))
+        return
+
+    if action == "add":
+        name = " ".join(args.rest[1:])
+        if not name:
+            die("what card should I add?")
+        card = resolve_card(conn, name, args.set, args.number)
+        added = decks.add_card(conn, deck, card, quantity=args.qty, role=args.role,
+                               status=args.status)
+        decks.sync_to_db(conn)
+        print("Added {}x {} to {} [{}]".format(
+            args.qty, card.short(), deck.name, added.status))
+        if added.status == "contested":
+            print()
+            print(decks.format_contentions(decks.contentions(conn)))
+        return
+
+    if action == "remove":
+        name = " ".join(args.rest[1:])
+        card = resolve_card(conn, name, args.set, args.number)
+        if decks.remove_card(deck, card.scryfall_id, args.qty):
+            decks.sync_to_db(conn)
+            print("Removed {} from {}.".format(card.short(), deck.name))
+        else:
+            die("{} is not in {}".format(card.short(), deck.name))
+        return
+
+    if action == "export":
+        if args.format in ("manabox", "both"):
+            path = decks.export_manabox(conn, deck)
+            print("ManaBox CSV: {}".format(os.path.relpath(path, paths.ROOT)))
+        if args.format in ("text", "both"):
+            path = decks.export_text(conn, deck)
+            print("Decklist:    {}".format(os.path.relpath(path, paths.ROOT)))
+        return
+
+    die("unknown deck action {!r}".format(action))
+
+
+def cmd_check(args, conn):
+    results = invariants.run_all(conn)
+    print("INVARIANTS")
+    print(invariants.format_results(results))
+    print()
+    print("PLAN vs. PHYSICAL")
+    print(decks.format_drift(decks.drift(conn)))
+    raise SystemExit(invariants.worst_exit_code(results))
+
+
+def cmd_rebuild(args, conn):
+    """Recreate the database from the durable text inputs."""
+    snapshots = sorted(f for f in os.listdir(paths.SNAPSHOTS) if f.endswith(".csv"))
+    if not snapshots:
+        die("no snapshots in {}".format(os.path.relpath(paths.SNAPSHOTS, paths.ROOT)))
+    conn.close()
+    if os.path.exists(paths.DB):
+        os.remove(paths.DB)
+    fresh = db.connect()
+    db.init(fresh)
+    for name in snapshots:
+        print("replaying {}".format(name))
+        importer.run_import(fresh, os.path.join(paths.SNAPSHOTS, name),
+                            allow_proxy_conflicts=True, log=lambda *a: None)
+    decks.sync_to_db(fresh)
+    count = tagging.resync_from_file(fresh)
+    print()
+    print("Rebuilt from {} snapshot(s), {} deck file(s) and {} art tag(s).".format(
+        len(snapshots), len(decks.load_all()), count))
+
+
+def cmd_gallery(args, conn):
+    path = gallery.build(conn, offline_art=args.offline_art)
+    print("Gallery: {}".format(os.path.relpath(path, paths.ROOT)))
+    print("Open it with:  open {}".format(os.path.relpath(path, paths.ROOT)))
+
+
+def cmd_doctor(args, conn):
+    print("DIAGNOSIS")
+    snapshot_id = db.latest_snapshot_id(conn)
+    if snapshot_id is None:
+        print("  no snapshot imported. Run: ./mtg import <export.csv>")
+        return
+
+    row = conn.execute("SELECT filename FROM snapshots WHERE snapshot_id = ?",
+                       (snapshot_id,)).fetchone()
+    parsed = manabox.parse(os.path.join(paths.SNAPSHOTS, row["filename"]))
+    if parsed.conflicts:
+        print("  {} lot(s) disagree about being proxies:".format(len(parsed.conflicts)))
+        for conflict in parsed.conflicts:
+            print(conflict.describe())
+            print("      override key: {}".format(manabox.key_str(conflict.lot.key)))
+        print()
+        print("  Record verdicts in {} as:".format(
+            os.path.relpath(paths.OVERRIDES, paths.ROOT)))
+        print('    {"proxy": {"<override key>": true}}')
+    else:
+        print("  proxy markers: all consistent")
+
+    contested = decks.contentions(conn)
+    print()
+    print("  " + decks.format_contentions(contested).replace("\n", "\n  "))
+    print()
+    print("  " + decks.format_drift(decks.drift(conn)).replace("\n", "\n  "))
+
+
+# ---- wiring ----
+
+def build_parser():
+    parser = argparse.ArgumentParser(
+        prog="mtg", description=__doc__,
+        formatter_class=argparse.RawDescriptionHelpFormatter)
+    sub = parser.add_subparsers(dest="command", required=True)
+
+    p = sub.add_parser("import", help="load a ManaBox export and show what changed")
+    p.add_argument("csv")
+    p.add_argument("--allow-proxy-conflicts", action="store_true",
+                   help="treat ambiguous proxy rows as real cards")
+    p.add_argument("--offline", action="store_true", help="never call Scryfall")
+    p.add_argument("--detail", type=int, default=25, help="how many changes to list")
+    p.set_defaults(func=cmd_import)
+
+    p = sub.add_parser("value", help="collection value, proxies excluded")
+    p.add_argument("--usd-rate", type=float, default=value.DEFAULT_USD_TO_EUR)
+    p.set_defaults(func=cmd_value)
+
+    p = sub.add_parser("find", help="search by art tag, colour, type, availability")
+    p.add_argument("text", nargs="*", help="free text over name, type and art description")
+    p.add_argument("--tag", action="append", default=[], help="repeatable")
+    p.add_argument("--colors", default="", help="colour identity subset, e.g. UG")
+    p.add_argument("--type", default="", help="substring of the type line")
+    p.add_argument("--available", action="store_true",
+                   help="only cards not already claimed by a deck")
+    p.add_argument("--no-proxies", action="store_true")
+    p.add_argument("--limit", type=int, default=40)
+    p.set_defaults(func=cmd_find)
+
+    p = sub.add_parser("tag", help="art tagging (the only step that costs money)")
+    p.add_argument("--submit", action="store_true")
+    p.add_argument("--collect", action="store_true")
+    p.add_argument("--status", action="store_true")
+    p.add_argument("--resync", action="store_true",
+                   help="reload tags from art_tags.jsonl")
+    p.add_argument("--batch", default=None)
+    p.add_argument("--limit", type=int, default=None,
+                   help="tag only the first N artworks (use for a trial run)")
+    p.add_argument("--embed", action="store_true",
+                   help="upload image bytes instead of linking the Scryfall URL")
+    p.set_defaults(func=cmd_tag)
+
+    p = sub.add_parser("deck", help="deck plans and the one-card-one-deck rule")
+    p.add_argument("action", choices=["list", "show", "new", "add", "remove",
+                                      "conflicts", "export", "seed"])
+    p.add_argument("rest", nargs="*")
+    p.add_argument("--set", default="", help="disambiguate by set code")
+    p.add_argument("--number", default="", help="disambiguate by collector number")
+    p.add_argument("--qty", type=int, default=1)
+    p.add_argument("--role", default="")
+    p.add_argument("--status", default=None,
+                   choices=["assigned", "proxy", "wanted", "contested"])
+    p.add_argument("--binder", default="", help="ManaBox binder name for a new deck")
+    p.add_argument("--format", default="both", choices=["manabox", "text", "both"])
+    p.add_argument("--overwrite", action="store_true")
+    p.set_defaults(func=cmd_deck)
+
+    p = sub.add_parser("check", help="run every invariant and report drift")
+    p.set_defaults(func=cmd_check)
+
+    p = sub.add_parser("rebuild", help="recreate collection.db from the text files")
+    p.set_defaults(func=cmd_rebuild)
+
+    p = sub.add_parser("gallery", help="build the offline HTML gallery and workbench")
+    p.add_argument("--offline-art", action="store_true",
+                   help="download art into build/art/ so the page works offline")
+    p.set_defaults(func=cmd_gallery)
+
+    p = sub.add_parser("doctor", help="diagnose known dead ends and say how to fix them")
+    p.set_defaults(func=cmd_doctor)
+
+    return parser
+
+
+def main(argv=None):
+    args = build_parser().parse_args(argv)
+    conn = db.connect()
+    db.init(conn)
+    try:
+        args.func(args, conn)
+    except decks.DeckError as exc:
+        die(str(exc))
+    finally:
+        try:
+            conn.commit()
+            conn.close()
+        except Exception:  # noqa: BLE001 - already closed by rebuild
+            pass
+
+
+if __name__ == "__main__":
+    main()

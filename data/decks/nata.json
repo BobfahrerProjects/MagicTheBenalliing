@@ -1,0 +1,271 @@
+{
+  "deck_id": "nata",
+  "name": "Nata",
+  "format": "commander",
+  "commander_scryfall_id": null,
+  "manabox_binder": "Nata",
+  "status": "building",
+  "notes": "Seeded from ManaBox snapshot 1.",
+  "cards": [
+    {
+      "oracle_id": "f9db72dc-9a5b-48a4-a86e-7464d9a2166a",
+      "name": "Abrade",
+      "scryfall_id": "c5bb5307-e874-42c4-b85d-06b9f6c474c8",
+      "set": "soa",
+      "number": "37",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "06ccec61-27d2-4079-80b5-29ebd3a980ee",
+      "name": "Cache Grab",
+      "scryfall_id": "dfd977dc-a7c3-4d0a-aca7-b25bd154e963",
+      "set": "blb",
+      "number": "167",
+      "quantity": 2,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "05c5ee65-651b-4bfb-b57f-305026507135",
+      "name": "Colossification",
+      "scryfall_id": "c2cad902-ffd2-4bab-b114-b4b6df2ac6b3",
+      "set": "blb",
+      "number": "392",
+      "quantity": 2,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "5b4b21ed-c24e-4038-83fb-bd7f3c3426cd",
+      "name": "Emberheart Challenger",
+      "scryfall_id": "0035082e-bb86-4f95-be48-ffc87fe5286d",
+      "set": "blb",
+      "number": "133",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "a75445d3-1303-4bb5-89ad-26ea93fecd48",
+      "name": "Evolving Wilds",
+      "scryfall_id": "71afb548-691d-4c72-b369-85f9b451c71d",
+      "set": "afr",
+      "number": "256",
+      "quantity": 2,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "d767463b-0fc9-43fc-a85f-e60f030f9b96",
+      "name": "Flamecache Gecko",
+      "scryfall_id": "fb8e7c97-8393-41b8-bb0b-3983dcc5e7f4",
+      "set": "blb",
+      "number": "135",
+      "quantity": 2,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "bbfc5011-a9b7-442d-a443-974a5a64de46",
+      "name": "Heaped Harvest",
+      "scryfall_id": "3b5349db-0e0a-4b15-886e-0db403ef49cb",
+      "set": "blb",
+      "number": "175",
+      "quantity": 2,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "beb02f49-95a6-49bf-b176-4e4b2ab5b651",
+      "name": "Hearthborn Battler",
+      "scryfall_id": "bef1cf5c-9738-4062-8cb1-87a372d36687",
+      "set": "blb",
+      "number": "139",
+      "quantity": 2,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "382d18a2-438e-4ae7-a83f-1658ef1f9b07",
+      "name": "Hidden Grotto",
+      "scryfall_id": "4ba8f2e7-8357-4862-97dc-1942d066023a",
+      "set": "blb",
+      "number": "254",
+      "quantity": 3,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "ab0aea13-1dbc-424a-ab7e-cdb303036a56",
+      "name": "High Stride",
+      "scryfall_id": "09c8cf4b-8e65-4a1c-b458-28b5ab56b390",
+      "set": "blb",
+      "number": "176",
+      "quantity": 2,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "a8a9b103-0cb8-4810-a2d7-42f6a10f80bd",
+      "name": "Hunter's Talent",
+      "scryfall_id": "e9a31863-9649-4a4f-99e4-c93729938bd7",
+      "set": "blb",
+      "number": "179",
+      "quantity": 2,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "46ce3698-e4e6-44e9-8b99-2b12a703e91e",
+      "name": "Keen-Eyed Curator",
+      "scryfall_id": "8cf33d80-0704-4dc4-8e8d-1dcbcbc35add",
+      "set": "blb",
+      "number": "181",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "b254ca74-2a96-4590-91bc-650f407daf5d",
+      "name": "Manifold Mouse",
+      "scryfall_id": "db3832b5-e83f-4569-bd49-fb7b86fa2d47",
+      "set": "blb",
+      "number": "143",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "c115159c-6991-4812-b3b6-6ed80221cab4",
+      "name": "Muerra, Trash Tactician",
+      "scryfall_id": "b40e4658-fd68-46d0-9a89-25570a023d19",
+      "set": "blb",
+      "number": "227",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "177b7fe4-8565-4631-b4d9-8b2b4282f3ac",
+      "name": "Oakhollow Village",
+      "scryfall_id": "0d49b016-b02b-459f-85e9-c04f6bdcb94e",
+      "set": "blb",
+      "number": "258",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "c8c3a293-ae6d-4c52-be2d-2d4b6a8edb66",
+      "name": "Overprotect",
+      "scryfall_id": "079e979f-b618-4625-989c-e0ea5b61ed8a",
+      "set": "blb",
+      "number": "185",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "50ab0194-c7dc-4f11-abc0-1a82393cc42e",
+      "name": "Pawpatch Recruit",
+      "scryfall_id": "7d4d88ba-0ee4-4f66-995b-2e50614f50ee",
+      "set": "blb",
+      "number": "187",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "f62e9a9f-9989-4a62-b063-cca32e21fe8b",
+      "name": "Predator's Strike",
+      "scryfall_id": "75e5bcc2-9203-4526-a9a9-fac6fd02a854",
+      "set": "mrd",
+      "number": "128",
+      "quantity": 2,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "8539f295-5d58-4436-a73a-b9277c4c7795",
+      "name": "Rampant Growth",
+      "scryfall_id": "a429a983-d28e-46e7-816f-0398428db11a",
+      "set": "9ed",
+      "number": "263",
+      "quantity": 4,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "7e103748-3f76-42ce-a063-d0256b2dce2b",
+      "name": "Rockface Village",
+      "scryfall_id": "62799d24-39a6-4e66-8ac3-7cafa99e6e6d",
+      "set": "blb",
+      "number": "259",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "0cc89c15-5a48-4998-b6df-21791b6ed9a3",
+      "name": "Roughshod Duo",
+      "scryfall_id": "78cdcfb9-a247-4c2d-a098-5b57570f8cd5",
+      "set": "blb",
+      "number": "150",
+      "quantity": 3,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "74868bc0-6081-4f46-a2c6-9521cd5465aa",
+      "name": "Tender Wildguide",
+      "scryfall_id": "6b8bfa91-adb0-4596-8c16-d8bb64fdb26d",
+      "set": "blb",
+      "number": "196",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "d17d4003-e1c9-42be-ac76-3b5500fad485",
+      "name": "Three Tree Rootweaver",
+      "scryfall_id": "d1ab6e14-26e0-4174-b5c6-bc0f5c26b177",
+      "set": "blb",
+      "number": "198",
+      "quantity": 2,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "d23c3613-bc5e-4fc5-939c-62a090c53a79",
+      "name": "Uncharted Haven",
+      "scryfall_id": "68b90f54-d629-4126-82cc-13b51d6c1c3e",
+      "set": "blb",
+      "number": "261",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "60654004-7d9a-47ac-a70d-b246dd1728d3",
+      "name": "Valley Flamecaller",
+      "scryfall_id": "a0812db4-b7d1-4cf7-aaa5-9c0e784079a1",
+      "set": "blb",
+      "number": "158",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "98fa5a06-0553-40fd-999c-bc31c9b3f4db",
+      "name": "Volcanic Hammer",
+      "scryfall_id": "9db3f454-4aeb-4e48-b961-bea760ea8ddf",
+      "set": "9ed",
+      "number": "226",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    }
+  ]
+}

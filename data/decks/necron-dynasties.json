@@ -1,0 +1,881 @@
+{
+  "deck_id": "necron-dynasties",
+  "name": "Necron Dynasties",
+  "format": "commander",
+  "commander_scryfall_id": null,
+  "manabox_binder": "Necron Dynasties",
+  "status": "building",
+  "notes": "Seeded from ManaBox snapshot 1.",
+  "cards": [
+    {
+      "oracle_id": "32476743-c9d4-49ca-bec2-0669c215841b",
+      "name": "Anrakyr the Traveller",
+      "scryfall_id": "6ea09406-c65e-4ee4-9c74-0553e5110837",
+      "set": "40k",
+      "number": "28",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "0bc7f093-bef0-4f1a-852c-4b75ebf54838",
+      "name": "Arcane Signet",
+      "scryfall_id": "6b3f3fbb-0188-4eec-90c0-81c801d3a996",
+      "set": "40k",
+      "number": "228",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "326ba371-124c-4949-a048-3a0c8962e567",
+      "name": "Barren Moor",
+      "scryfall_id": "22a7ef45-0fa0-4924-955c-27da5f6d0098",
+      "set": "40k",
+      "number": "266",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "aef874fa-93c0-4f86-8b0d-dc24ec51467d",
+      "name": "Beacon of Unrest",
+      "scryfall_id": "e313ae8b-f77b-47a4-9202-305bf6deb3dc",
+      "set": "40k",
+      "number": "194",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "5443557e-440f-4fdd-a29b-7740d7cec085",
+      "name": "Biotransference",
+      "scryfall_id": "75a787a3-5838-4121-bbaf-745d22c4b0bc",
+      "set": "40k",
+      "number": "30",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "776341cb-d2ec-423f-9250-92dc8bd8d503",
+      "name": "Bitter Triumph",
+      "scryfall_id": "db465858-0593-4850-8f1d-400fe230a18d",
+      "set": "soa",
+      "number": "26",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "3a38d2d1-c4ff-4088-b1df-5feb9602ee2e",
+      "name": "Blasting Station",
+      "scryfall_id": "71e2f832-6601-4232-b250-fd1c88538fbd",
+      "set": "5dn",
+      "number": "107",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "09b895ff-e729-48d1-bfc1-ea5fd7adda6a",
+      "name": "Caged Sun",
+      "scryfall_id": "e828d87a-f2c7-475b-8c8f-b36474c50cf9",
+      "set": "40k",
+      "number": "231",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "5b7f6cc3-8d4e-42e5-a908-7ebe3bccaf1e",
+      "name": "Canoptek Scarab Swarm",
+      "scryfall_id": "3ce2021c-1422-4901-a554-2d4fab72c8e4",
+      "set": "40k",
+      "number": "150",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "bcad5b83-5513-4455-a9c9-716281505eaa",
+      "name": "Canoptek Spyder",
+      "scryfall_id": "56ae1e4b-b620-480b-b6fc-66f2137d7d89",
+      "set": "40k",
+      "number": "151",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "678b3fb5-aa9f-4268-9433-2a89dd37b927",
+      "name": "Canoptek Tomb Sentinel",
+      "scryfall_id": "aec9ba42-4c58-4e40-a8c5-63da81c44616",
+      "set": "40k",
+      "number": "152",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "61849685-b407-4ed0-aafc-ec3a003200b9",
+      "name": "Canoptek Wraith",
+      "scryfall_id": "06199f88-720f-484a-953e-9189bafbe173",
+      "set": "40k",
+      "number": "153",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "2e03e44a-9fff-4490-859f-b42e89e8563a",
+      "name": "Chromatic Sphere",
+      "scryfall_id": "f31a6dfd-93d2-49c8-a357-9a707b9c42bd",
+      "set": "mrd",
+      "number": "151",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "9833e3bd-6e7f-41b7-bf7e-ffb74ff17844",
+      "name": "Chronomancer",
+      "scryfall_id": "a960acea-3404-4834-9296-d6715add49af",
+      "set": "40k",
+      "number": "32",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "0b67c4e2-f88b-4e01-85a1-9d5f5b8db13b",
+      "name": "Commander's Sphere",
+      "scryfall_id": "746a626d-3379-4274-a9ae-ec77469e0ab1",
+      "set": "40k",
+      "number": "234",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "4fd493b3-63f9-4633-8f88-8755e489da32",
+      "name": "Conjurer's Bauble",
+      "scryfall_id": "2d32960e-d182-455f-8e74-eb11b10050da",
+      "set": "5dn",
+      "number": "112",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "655aece2-f33a-46e0-8f80-112ae8a457fe",
+      "name": "Convergence of Dominion",
+      "scryfall_id": "e03d8676-f693-4155-b75f-dcbe2890ccb0",
+      "set": "40k",
+      "number": "154",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "75564721-e4e9-463a-b49e-f0c7cd6f53a7",
+      "name": "Cranial Plating",
+      "scryfall_id": "53a7cccd-b445-46e3-b70c-afc3bb2de85d",
+      "set": "40k",
+      "number": "236",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "27a4b633-5a62-4d8c-8cc6-44959c311de9",
+      "name": "Cryptek",
+      "scryfall_id": "ea8483a2-9135-48d1-994d-9525d5ffcabb",
+      "set": "40k",
+      "number": "33",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "e26f0fcd-d6d2-4e7b-82dd-711bc0b9dad3",
+      "name": "Cryptothrall",
+      "scryfall_id": "086d94a0-763e-495e-b952-5c13383657c9",
+      "set": "40k",
+      "number": "155",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "932708ae-9d5c-4561-aa8b-0d2222d37fdc",
+      "name": "Darkness",
+      "scryfall_id": "ed94c73e-25d3-43bb-bdaa-b05f9b972216",
+      "set": "40k",
+      "number": "197",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "f4c57454-d36f-4f38-b7ac-76477a516c3e",
+      "name": "Decorum Dissertation",
+      "scryfall_id": "6040e27f-ed10-410c-8ae5-cfcba35c0d4c",
+      "set": "sos",
+      "number": "292",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "49dddec0-d958-4810-8c6e-225fc8118c8f",
+      "name": "Defile",
+      "scryfall_id": "ae79f72a-0f44-4a79-a640-582282706a1b",
+      "set": "40k",
+      "number": "199",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "190e664b-9875-4335-af46-353886ed18ff",
+      "name": "Desert of the Glorified",
+      "scryfall_id": "f9161bb7-07db-468f-b944-37a90fa0e4d9",
+      "set": "40k",
+      "number": "275",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "c8625113-0ce4-4454-83a1-25c31b8bfb9a",
+      "name": "Disciple of the Vault",
+      "scryfall_id": "644359dc-3c4c-4291-876d-7390dc466877",
+      "set": "mrd",
+      "number": "62",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "352b64d2-2ae5-44ee-a64f-94932ef545d3",
+      "name": "Dread Return",
+      "scryfall_id": "6a73b481-8e62-4742-bbd0-33b8048602d7",
+      "set": "40k",
+      "number": "200",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "132786bb-157c-4e2c-8f82-13df6a667448",
+      "name": "Dross Scorpion",
+      "scryfall_id": "27c5381c-2e79-41fa-b1d7-2cf0c6dc1808",
+      "set": "mrd",
+      "number": "164",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "93056597-b964-421f-be2f-e92abef1c2a4",
+      "name": "Emeritus of Woe // Demonic Tutor",
+      "scryfall_id": "7eb9e83d-515d-4911-a06b-9982200277b2",
+      "set": "sos",
+      "number": "80",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "cb923c4d-1d2e-4039-90bb-72d1981b9738",
+      "name": "Endless Atlas",
+      "scryfall_id": "c8b2fcc3-5c39-403b-8311-5760190388b2",
+      "set": "40k",
+      "number": "237",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "5825997b-10d7-4a36-972c-a80ddd90b8ed",
+      "name": "Feed the Swarm",
+      "scryfall_id": "a041cfe3-a02d-41e2-aea3-76bc2bacc10e",
+      "set": "soa",
+      "number": "29",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "899415fd-4164-42a5-a0c7-eef1967c5ec5",
+      "name": "Flayed One",
+      "scryfall_id": "b0ab96a5-0bcc-4732-8936-9522f3de3962",
+      "set": "40k",
+      "number": "34",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "bb1b4786-3804-486b-9fd9-85848d24d362",
+      "name": "Ghost Ark",
+      "scryfall_id": "2c6865c1-8144-4b06-a599-a62382fe1124",
+      "set": "40k",
+      "number": "156",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "9a02a9a7-39d9-4763-85d3-747a0540b60b",
+      "name": "Gilded Lotus",
+      "scryfall_id": "4991e495-9b6d-4f52-aada-3187fd44b945",
+      "set": "40k",
+      "number": "239",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "2f092562-9e17-43cd-aeb8-d0567f99363e",
+      "name": "Go for the Throat",
+      "scryfall_id": "e915e66d-4531-41f0-bc4f-ad9cd8851a05",
+      "set": "40k",
+      "number": "201",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "6cb8b8c4-0674-4f14-9d89-010969fbb80e",
+      "name": "Grave Researcher // Reanimate",
+      "scryfall_id": "8b1e10e8-ea14-4761-910b-4072e2a18456",
+      "set": "sos",
+      "number": "85",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "32263baa-d3f0-463f-92b3-4e9938476add",
+      "name": "Hedron Archive",
+      "scryfall_id": "2feb16d2-7406-45ab-9595-e6c48fc47bf5",
+      "set": "40k",
+      "number": "240",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "b3329240-c812-45ea-a7f8-4d79cd4ed515",
+      "name": "Hexmark Destroyer",
+      "scryfall_id": "66a4e78b-9600-4fec-94f0-65cf8ffce2dc",
+      "set": "40k",
+      "number": "36",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "10f274f9-9044-447b-81c9-d4906ad9e6be",
+      "name": "Illuminor Szeras",
+      "scryfall_id": "d161a190-3c85-4207-9d88-7ff9213efea8",
+      "set": "40k",
+      "number": "37",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "425fea06-76ec-4cd9-bd3b-750504fd7fd2",
+      "name": "Imotekh the Stormlord",
+      "scryfall_id": "286ff901-1faf-4a02-a37a-fa165989112f",
+      "set": "40k",
+      "number": "5",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "f62cabf0-df0d-4c4f-a93a-9340967d1775",
+      "name": "Leaden Myr",
+      "scryfall_id": "555efe5f-848f-44da-92b5-69c8e852f179",
+      "set": "mrd",
+      "number": "191",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "9e6a3df4-67a3-452e-a6ef-f04dbadb21ef",
+      "name": "Living Death",
+      "scryfall_id": "9e03a4fe-6ee5-423b-bc05-452e8d14507b",
+      "set": "40k",
+      "number": "202",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "fd03f20a-d365-48fb-8b2a-ad4b502a0045",
+      "name": "Lokhust Heavy Destroyer",
+      "scryfall_id": "4665fa5d-37ea-4898-a4a4-7bc5311075de",
+      "set": "40k",
+      "number": "38",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "e82daa7b-d9fd-48c4-b5b2-f3b1f6ef1a24",
+      "name": "Lychguard",
+      "scryfall_id": "6737a276-b5e9-4c55-b995-ada96eca4e6e",
+      "set": "40k",
+      "number": "39",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "d6b2c998-a226-426c-a40d-6e6007041bfe",
+      "name": "Mask of Memory",
+      "scryfall_id": "30acbb34-3ff5-4d38-b349-f108351f94f8",
+      "set": "40k",
+      "number": "243",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "fa4dffda-6f04-4d0b-829d-28a1a5794dee",
+      "name": "Millikin",
+      "scryfall_id": "0550133b-22cf-4ecd-b89a-8c2f0beeaa22",
+      "set": "ody",
+      "number": "302",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "47e79913-322e-4ba6-9bf8-3b4c1c82a6c4",
+      "name": "Mind Slash",
+      "scryfall_id": "76da89df-edb9-482c-a3bb-e7cf650990cc",
+      "set": "8ed",
+      "number": "145",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "c97361b5-af16-4a7b-af85-a429dbaf4ad2",
+      "name": "Mind Stone",
+      "scryfall_id": "3e2550d5-ba6a-4cab-908a-b537973800c1",
+      "set": "40k",
+      "number": "245",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "698e79ec-c2bc-4973-a095-f3c57b50e39c",
+      "name": "Mutilate",
+      "scryfall_id": "b931c7cb-ef83-440c-9195-ace311f4a601",
+      "set": "40k",
+      "number": "203",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "2549bc57-9ffb-4053-9f10-f2a5f792b845",
+      "name": "Myriad Landscape",
+      "scryfall_id": "a3a12e0f-85de-440f-8a7d-230bf8c415c1",
+      "set": "40k",
+      "number": "285",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "994bc16d-fdc6-475c-96df-beeb4d5aa03e",
+      "name": "Mystic Forge",
+      "scryfall_id": "cf56bef3-7f0e-47b4-96f5-325722f7708a",
+      "set": "40k",
+      "number": "246",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "34993bd9-53bf-46b2-bc20-b6daf82382d9",
+      "name": "Necrogen Spellbomb",
+      "scryfall_id": "0950bfe7-2600-4e01-8f54-f03a5c023520",
+      "set": "mrd",
+      "number": "216",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "45866598-4ee4-46b6-ade2-ffcdbe98e58f",
+      "name": "Necron Deathmark",
+      "scryfall_id": "4129cb0d-eefe-4971-9db8-1196201ef353",
+      "set": "40k",
+      "number": "42",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "20932bca-52be-4288-9c7d-4154650c5ec9",
+      "name": "Necron Monolith",
+      "scryfall_id": "9b1ecad3-8cec-4a18-9401-6eebc7feeacc",
+      "set": "40k",
+      "number": "161",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "2c0de95f-4269-439c-a1bc-faa11348b185",
+      "name": "Necron Overlord",
+      "scryfall_id": "62d70fd2-de4e-41c6-b3e5-147fffca8a20",
+      "set": "40k",
+      "number": "43",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "dea9741a-3360-4a17-aeea-a854e2174d25",
+      "name": "Night Scythe",
+      "scryfall_id": "9a71531f-d4b6-4cc7-8193-b2f5bce33b21",
+      "set": "40k",
+      "number": "162",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "473a7998-669d-4181-83fe-f178a2e781f0",
+      "name": "Out of the Tombs",
+      "scryfall_id": "f1170bfa-9623-44c3-a15e-bd8c2627fe6e",
+      "set": "40k",
+      "number": "46",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "b3ff8da4-f2cc-41c3-8950-9cc531854b78",
+      "name": "Plasmancer",
+      "scryfall_id": "8deb5d3a-0762-4c4f-afef-fd86728914b4",
+      "set": "40k",
+      "number": "48",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "9809d975-7ef8-4946-9041-607c4e954b13",
+      "name": "Polluted Mire",
+      "scryfall_id": "2862c204-3e32-4ff5-b767-e1af0f37b96a",
+      "set": "40k",
+      "number": "288",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "589b742c-fee5-413a-a56c-4d4ffaf0f73d",
+      "name": "Psychomancer",
+      "scryfall_id": "780743bf-e1a0-4114-9474-319632e0c775",
+      "set": "40k",
+      "number": "51",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "c23e5b80-08d2-4e24-9908-fe2aa4f30f6f",
+      "name": "Reliquary Tower",
+      "scryfall_id": "fc07ad3a-982a-4bfc-b2e7-8e6e340ed32c",
+      "set": "40k",
+      "number": "291",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "b410f294-cbb6-4016-981f-808fd9b7bbae",
+      "name": "Resurrection Orb",
+      "scryfall_id": "2d6209c8-9fa1-4f0a-ab65-ac2fedfcd09b",
+      "set": "40k",
+      "number": "165",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "0192ba05-6144-4fec-a803-462ecdf64195",
+      "name": "Royal Warden",
+      "scryfall_id": "0a968eac-2840-41ba-b7de-3182964d4913",
+      "set": "40k",
+      "number": "52",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "7388a797-d40d-4783-a281-d17bc159b856",
+      "name": "Sautekh Immortal",
+      "scryfall_id": "c57778d7-fbd7-482f-b895-c033592f7af6",
+      "set": "40k",
+      "number": "54",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "ce08aff3-efe6-4186-9557-274e00a7ca38",
+      "name": "Sceptre of Eternal Glory",
+      "scryfall_id": "bc7f3009-c852-41e7-8e62-d2ee637b3998",
+      "set": "40k",
+      "number": "166",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "44443716-8356-40cd-a879-35264b29108c",
+      "name": "Scheming Silvertongue // Sign in Blood",
+      "scryfall_id": "fe85a124-0d8b-4a29-8df1-65888a39147f",
+      "set": "sos",
+      "number": "99",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "6c85271c-c711-49b0-a72e-9e576c33714d",
+      "name": "Sculpting Steel",
+      "scryfall_id": "5cfa5564-47d8-48e7-a815-2a6cff683a52",
+      "set": "40k",
+      "number": "247",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "eedd5a17-d0fe-4a13-8f2c-f343bfa43f92",
+      "name": "Shard of the Nightbringer",
+      "scryfall_id": "21e4140e-22b3-479f-a259-0f56ed02b8ad",
+      "set": "40k",
+      "number": "55",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "d04d2434-121e-4420-abfc-fa21ad5577c3",
+      "name": "Shard of the Void Dragon",
+      "scryfall_id": "41dd0b55-3dbb-4b65-a949-20c2a12f7edd",
+      "set": "40k",
+      "number": "56",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "217062f5-96f1-454c-9507-17f34ef37070",
+      "name": "Sheoldred's Edict",
+      "scryfall_id": "9070d77d-4a41-4f22-9579-06a7db5a520e",
+      "set": "soa",
+      "number": "97",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "f96fcb37-5f17-4231-b1a2-64f5fe45730b",
+      "name": "Skorpekh Destroyer",
+      "scryfall_id": "b8c69031-588d-44a2-89b3-972a335541e5",
+      "set": "40k",
+      "number": "57",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "c40e8d52-d4cc-4502-8b51-a5612dbe1ada",
+      "name": "Skorpekh Lord",
+      "scryfall_id": "b768ec5f-771a-4acd-b3dd-85dea914689e",
+      "set": "40k",
+      "number": "58",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487",
+      "name": "Sol Ring",
+      "scryfall_id": "e3450882-d791-4172-b02a-ee7fdb36acfc",
+      "set": "40k",
+      "number": "252",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "9a63f950-2e8a-4617-896c-1d0af538dbc7",
+      "name": "Szarekh, the Silent King",
+      "scryfall_id": "e11174b2-2423-4a6e-9dcf-ff550eee7e5a",
+      "set": "40k",
+      "number": "1",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "3f97541e-34f3-4f7f-8ac2-7167b2ec9b33",
+      "name": "Technomancer",
+      "scryfall_id": "c160c1f7-714e-444a-ab74-c64c3a099a48",
+      "set": "40k",
+      "number": "61",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "5924cbb0-19b5-449c-a7c5-722e744a54f8",
+      "name": "The War in Heaven",
+      "scryfall_id": "cd556cd1-e33a-433d-ac18-4a4fd195c3ab",
+      "set": "40k",
+      "number": "69",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "97f9aa5e-e34d-4029-9213-b32ebaf9859c",
+      "name": "Their Name Is Death",
+      "scryfall_id": "ea5ddc28-dfc1-4b96-b6e2-590fcb1f83ef",
+      "set": "40k",
+      "number": "62",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "8cd45064-2ad9-4247-902e-aefaf3bc1a43",
+      "name": "Their Number Is Legion",
+      "scryfall_id": "f03c1eb4-1f47-4b65-8d8d-4057fb6997e1",
+      "set": "40k",
+      "number": "63",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "9965d9c5-2ebf-4a6c-930e-55c5890979be",
+      "name": "Thought Vessel",
+      "scryfall_id": "ebf52151-9b4b-40c3-945b-8c32d13e1ad3",
+      "set": "40k",
+      "number": "259",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "c857de66-f4e0-4e97-ad01-fac623af8225",
+      "name": "Tomb Blade",
+      "scryfall_id": "2f5f2e19-41ce-40c6-9732-d0f88ad6735f",
+      "set": "40k",
+      "number": "64",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "986f510c-e2ec-423e-a443-51a169939558",
+      "name": "Tomb Fortress",
+      "scryfall_id": "5ffd1a43-5613-4058-9e51-fd3cc1585651",
+      "set": "40k",
+      "number": "168",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "1ef3b48a-55ef-422e-ac7f-e1c1057eec2c",
+      "name": "Trazyn the Infinite",
+      "scryfall_id": "1ae95cfb-1c3e-43cc-acfa-68f25b0f6e52",
+      "set": "40k",
+      "number": "65",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "52aa5a79-db0e-4eaa-b2df-e41674c47794",
+      "name": "Triarch Praetorian",
+      "scryfall_id": "5ad67a79-cb13-44b8-adac-36cfd211f2d3",
+      "set": "40k",
+      "number": "66",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "1b3ae9c3-1940-4fb8-a47c-2d9e1790f4a3",
+      "name": "Triarch Stalker",
+      "scryfall_id": "fbe75aae-727b-4cb0-967c-477d5a08b8f7",
+      "set": "40k",
+      "number": "67",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "060ae1bb-956a-4264-b405-a33151f31493",
+      "name": "Unstable Obelisk",
+      "scryfall_id": "f79d90f8-fb86-4846-833a-63c0496221e0",
+      "set": "40k",
+      "number": "260",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "09496421-74e4-466a-9546-56f2a0c8eef4",
+      "name": "Vault of Whispers",
+      "scryfall_id": "4dca7b45-164d-4181-9585-5d0f3b6a6927",
+      "set": "40k",
+      "number": "305",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "31f15274-301b-47c5-ba19-0ced04520878",
+      "name": "Wayfarer's Bauble",
+      "scryfall_id": "10887c92-2647-4372-ad54-cc13167786db",
+      "set": "40k",
+      "number": "262",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "e4a6c421-bef1-4360-a2dc-ae9c61d86b2f",
+      "name": "Welding Jar",
+      "scryfall_id": "42b7b73b-4800-4fc7-9a5c-93e00ea88498",
+      "set": "mrd",
+      "number": "274",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    }
+  ]
+}

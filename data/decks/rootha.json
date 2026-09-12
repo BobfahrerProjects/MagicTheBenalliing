@@ -1,0 +1,861 @@
+{
+  "deck_id": "rootha",
+  "name": "Rootha",
+  "format": "commander",
+  "commander_scryfall_id": null,
+  "manabox_binder": "Rootha",
+  "status": "building",
+  "notes": "Seeded from ManaBox snapshot 1.",
+  "cards": [
+    {
+      "oracle_id": "f9db72dc-9a5b-48a4-a86e-7464d9a2166a",
+      "name": "Abrade",
+      "scryfall_id": "1add1757-c1f8-448a-b279-c6940fb7ad5f",
+      "set": "soc",
+      "number": "234",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "ab1cc360-b9de-48d9-9983-4dfe4a7d2a37",
+      "name": "Arcane Denial",
+      "scryfall_id": "4931aa7c-b77b-4002-bfb1-b75a1bac1deb",
+      "set": "soc",
+      "number": "187",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "0bc7f093-bef0-4f1a-852c-4b75ebf54838",
+      "name": "Arcane Signet",
+      "scryfall_id": "7811dd72-61b9-4067-ac20-cea153e625d2",
+      "set": "soc",
+      "number": "127",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "8305d576-21d8-4ce7-8eda-a7cd9793aca5",
+      "name": "Archmage Emeritus",
+      "scryfall_id": "dd547601-d650-4a02-a3a4-890bcef03a7c",
+      "set": "soc",
+      "number": "188",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "a5cbd257-c836-493e-bb1a-76242619dea2",
+      "name": "Big Score",
+      "scryfall_id": "8b2699d2-2057-4fbf-8e52-736fcfe2759d",
+      "set": "soc",
+      "number": "237",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "7a2484a9-04fd-41a0-8224-610c1c07ed10",
+      "name": "Blasphemous Act",
+      "scryfall_id": "175eb155-7262-4c2e-85c3-e0cc9be855e5",
+      "set": "soc",
+      "number": "238",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "1bf505a7-292e-4642-83b6-8ff41ebe5d51",
+      "name": "Blazing Firesinger // Seething Song",
+      "scryfall_id": "3ba971e7-0b7a-4750-896f-7cf063e66b2a",
+      "set": "sos",
+      "number": "109",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "c7b044c3-3cfa-407e-bf20-2875e8e04b7b",
+      "name": "Brazen Borrower // Petty Theft",
+      "scryfall_id": "25d309d6-9e56-441e-bd29-5c903d5221bf",
+      "set": "soc",
+      "number": "190",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "a7ac5d98-805e-4212-be94-333a0c0c44a7",
+      "name": "Brudiclad, Telchor Engineer",
+      "scryfall_id": "d24bf1df-5087-4ad6-a1aa-4eda2340cd8b",
+      "set": "soc",
+      "number": "299",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "f1603384-4361-49c9-98aa-7785fc3504c4",
+      "name": "Cascade Bluffs",
+      "scryfall_id": "22acccd2-4e9d-46de-a060-863b08152e50",
+      "set": "soc",
+      "number": "364",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "086b2564-9114-4ba2-94fd-b490f98f38a7",
+      "name": "Chain Reaction",
+      "scryfall_id": "6f34d11e-8452-448f-be4f-838e0ace9904",
+      "set": "soc",
+      "number": "121",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "07a0cba9-8768-4fd9-a3d5-b0f83b4bf8e8",
+      "name": "Chaos Warp",
+      "scryfall_id": "65ae241c-8955-4c97-8be6-7356fbee2195",
+      "set": "soc",
+      "number": "239",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "0e25faa2-efb0-4ca5-b280-18c38faa860c",
+      "name": "Coastal Peak",
+      "scryfall_id": "a8af6ded-de96-4095-8a5b-9f1c79adea1a",
+      "set": "soc",
+      "number": "52",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "0895c9b7-ae7d-4bb3-af17-3b75deb50a25",
+      "name": "Command Tower",
+      "scryfall_id": "c46a217c-0ed2-4b3c-9a01-ee38d12d76f3",
+      "set": "soc",
+      "number": "129",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+      "name": "Counterspell",
+      "scryfall_id": "ee0d3f5f-7790-4772-bead-5d7114a23e94",
+      "set": "6ed",
+      "number": "61",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "0be907b2-54f9-4c8c-b6af-7c0093892e42",
+      "name": "Curiosity Crafter",
+      "scryfall_id": "930d830b-5e6a-422a-806e-fd7275517deb",
+      "set": "soc",
+      "number": "191",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "4d67e2a7-4aa7-44cc-853b-500d7aac046d",
+      "name": "Cursed Mirror",
+      "scryfall_id": "077392b3-6b06-46c8-8737-51e85f690448",
+      "set": "soc",
+      "number": "242",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "615b4189-e800-408b-99e0-71ae7089b937",
+      "name": "Dance with Calamity",
+      "scryfall_id": "69f34a40-30f8-4fdd-bb21-79171ba2f00d",
+      "set": "soc",
+      "number": "243",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "e4ed7935-0263-4cde-8118-ac18fffce3ef",
+      "name": "Determined Iteration",
+      "scryfall_id": "d95490fe-44f2-4f83-b587-b0df402d38ed",
+      "set": "soc",
+      "number": "122",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "f8b17b89-26ce-4208-874a-9e1d66514640",
+      "name": "Dig Through Time",
+      "scryfall_id": "020939d6-72f0-4aa0-9ac2-d16cc896cd7f",
+      "set": "soc",
+      "number": "195",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "655ee0db-1913-464f-bd06-072c6bf446bd",
+      "name": "Dirgur Focusmage // Braingeyser",
+      "scryfall_id": "7bdabeba-0cfb-4953-b725-50a48164a044",
+      "set": "soc",
+      "number": "18",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "27b047e3-0d41-45e2-98e9-9391d7923a1e",
+      "name": "Exotic Orchard",
+      "scryfall_id": "7db2934a-43a0-46ad-8380-ff6703f8fd6d",
+      "set": "soc",
+      "number": "369",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "c7aecca5-2f67-4245-ab2d-e723d8b23a67",
+      "name": "Expressive Iteration",
+      "scryfall_id": "db54cb6f-25e0-4d5f-876e-a6aa66042d63",
+      "set": "soc",
+      "number": "309",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "0c85b8f7-0bd0-4680-9ec5-d4b110460a54",
+      "name": "Fabled Passage",
+      "scryfall_id": "8119d329-6ee5-433c-bd81-8579bb061162",
+      "set": "soc",
+      "number": "130",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "a984db23-40ea-428d-829f-e944267280f8",
+      "name": "Faerie Mastermind",
+      "scryfall_id": "bc9a7599-3c7d-4b83-bff3-e3d1f20f1b0f",
+      "set": "soc",
+      "number": "114",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "95560508-7ac9-4be9-8a3f-3c7d5b52807b",
+      "name": "Fellwar Stone",
+      "scryfall_id": "385b9f5e-81dd-49f6-a644-59d53245e3dc",
+      "set": "soc",
+      "number": "347",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "62c15af0-40e1-407d-b056-7a3d909e3fdb",
+      "name": "Ferrous Lake",
+      "scryfall_id": "92fa559c-a99b-4bc1-86c4-0c5eeeac9f4f",
+      "set": "soc",
+      "number": "370",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "7137aae6-260d-41de-8b4e-42a8cf752697",
+      "name": "Frostboil Snarl",
+      "scryfall_id": "3dbddf20-1b92-482e-bbd9-1597531913a8",
+      "set": "soc",
+      "number": "374",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "943fc88d-c281-46bb-9dc7-1052f789362b",
+      "name": "Furygale Flocking",
+      "scryfall_id": "a967af7a-03ed-4858-9c26-66f2cb706b02",
+      "set": "soc",
+      "number": "32",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "f9217532-f7cf-4436-b476-72d97a3147dc",
+      "name": "Galazeth Prismari",
+      "scryfall_id": "abdd3b41-6bdd-4b35-998c-0358ba72ca12",
+      "set": "soc",
+      "number": "311",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "716b3ea2-45b7-4a8f-af72-de7f4e510eff",
+      "name": "Goldspan Dragon",
+      "scryfall_id": "848c1951-90fa-4f01-9aed-76f1afcd9995",
+      "set": "soc",
+      "number": "245",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "0bb896ba-e15e-43a9-9120-e674d7ba003c",
+      "name": "Hall of Oracles",
+      "scryfall_id": "c29b896e-eee0-4f40-89b8-89262dae44e1",
+      "set": "soc",
+      "number": "378",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "2e2ace5b-4018-43af-8e72-ebafec1a7739",
+      "name": "Harmonic Prodigy",
+      "scryfall_id": "63a565e3-d7a8-469d-898f-49fef634c107",
+      "set": "soc",
+      "number": "123",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "d751580b-bb72-4d1d-be27-d0410f883b2a",
+      "name": "Inspired Skypainter // Maestro's Gift",
+      "scryfall_id": "7fddd17b-8282-408e-a319-7f0bb437c52e",
+      "set": "soc",
+      "number": "48",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "ca204b66-8d0c-431a-8d34-282f7c2d17da",
+      "name": "Lightning Greaves",
+      "scryfall_id": "08005be9-fbf4-43e6-a742-b1fb8196c4a5",
+      "set": "soc",
+      "number": "350",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "985f9dd7-e693-48ff-9dd6-a1a3cbaa236b",
+      "name": "Magma Opus",
+      "scryfall_id": "0fd4a0f7-ba03-4158-95cd-4effe798aec0",
+      "set": "soc",
+      "number": "318",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "a8dba58b-2956-492e-ae30-49db2ae68e53",
+      "name": "Mana Geyser",
+      "scryfall_id": "dfbda387-3c7d-4c80-97c3-60c9d4757244",
+      "set": "soc",
+      "number": "247",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "f426aa1a-e1dc-4563-b450-2e23d6bd980b",
+      "name": "Manaform Hellkite",
+      "scryfall_id": "0a559655-0967-41b9-8248-170f95c05f84",
+      "set": "soc",
+      "number": "248",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "9ea14a03-c6a2-49ec-953d-4249a2c27e1d",
+      "name": "Mirrorwing Dragon",
+      "scryfall_id": "6ba557ab-9d80-4d0a-bddb-ec230cc4437d",
+      "set": "soc",
+      "number": "249",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "58c592ed-20fc-481b-909b-2315567e5f20",
+      "name": "Molten Tributary",
+      "scryfall_id": "9c6d0f64-b8e1-41bc-ab86-bd6783daf72a",
+      "set": "soc",
+      "number": "387",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "9a8f6e5e-6cde-49df-861c-a26cb09c9b12",
+      "name": "Muddle, the Ever-Changing",
+      "scryfall_id": "916d3e31-3243-47b3-b7d2-ce9a6dd47aba",
+      "set": "soc",
+      "number": "5",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "17b60106-a4c7-410a-8ac3-ec8e74e29a7c",
+      "name": "Mystic Sanctuary",
+      "scryfall_id": "4cd86997-d7b9-4b5b-9488-11f5c679e4d3",
+      "set": "soc",
+      "number": "388",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "b473e293-59e3-4e04-acf2-622604aeb25f",
+      "name": "Path of Ancestry",
+      "scryfall_id": "9335e773-4b45-4b91-8140-5159fe7e0395",
+      "set": "soc",
+      "number": "393",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "9e769a65-7aa5-484d-9493-badb485b5964",
+      "name": "Plargg and Nassari",
+      "scryfall_id": "e66ee7c6-23bc-4fef-a566-35aee2064bd9",
+      "set": "soc",
+      "number": "250",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "ac641490-ca14-48d7-8cc4-b69ce984befa",
+      "name": "Preordain",
+      "scryfall_id": "8221b564-acf0-4d82-94f5-2ba1337ff5e1",
+      "set": "soa",
+      "number": "21",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "c3c25a2c-f71c-4cb7-9117-0bcda9248bfd",
+      "name": "Prismari Charm",
+      "scryfall_id": "8f6c2a5e-fe13-407c-aadd-c9caf2884ff1",
+      "set": "sos",
+      "number": "211",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "fa3e28b1-131c-4223-81e0-18dfbab22c26",
+      "name": "Prismari Command",
+      "scryfall_id": "372d0c0b-439c-413f-aac4-5174c75aadb0",
+      "set": "soc",
+      "number": "323",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "f58117e4-ba85-41b8-8fd5-4245716a84dc",
+      "name": "Prismari Pianist",
+      "scryfall_id": "7e3e5990-ad48-4be2-af8a-4ff77177758d",
+      "set": "soc",
+      "number": "34",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "7bff8d4a-1c7d-48b8-b3e3-737dd6f01823",
+      "name": "Quick Study",
+      "scryfall_id": "2d4f0bc7-da7c-4749-a24c-b01f3eb5860c",
+      "set": "sos",
+      "number": "65",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "70dc830e-d05b-4fc7-88dd-879e140b3fbf",
+      "name": "Reality Shift",
+      "scryfall_id": "920bb44e-aa7f-4ee9-ab19-30114f55ec9b",
+      "set": "soc",
+      "number": "199",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "c23e5b80-08d2-4e24-9908-fe2aa4f30f6f",
+      "name": "Reliquary Tower",
+      "scryfall_id": "e2a27742-08c1-4153-af7f-25a7a98f585e",
+      "set": "soc",
+      "number": "398",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "163baf58-b35d-4f2b-aa53-8384b8b5800a",
+      "name": "Replication Technique",
+      "scryfall_id": "b3149976-2811-4bbd-af1e-d59016bb0754",
+      "set": "soc",
+      "number": "200",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "814e321d-16fd-4f7b-a8d8-2b089be76f2c",
+      "name": "Resculpt",
+      "scryfall_id": "5443f46d-03f9-468e-a78d-a059529b1151",
+      "set": "soc",
+      "number": "201",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "0ca4e80e-c19c-4b74-b531-c5a4dc5a8ba9",
+      "name": "Restless Spire",
+      "scryfall_id": "fbf4552a-643a-4dc7-a2ae-8e3af5c1ceef",
+      "set": "soc",
+      "number": "399",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "53236dd7-845a-444c-96d5-f41ed7325d8f",
+      "name": "Rhystic Study",
+      "scryfall_id": "3394cefd-a3c6-4917-8f46-234e441ecfb6",
+      "set": "pcy",
+      "number": "45",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "be4f47e9-1bd2-4aa9-bc85-3f203ad21639",
+      "name": "Rionya, Fire Dancer",
+      "scryfall_id": "086e68b5-0f89-46d0-9a04-7f8658a9ab53",
+      "set": "soc",
+      "number": "252",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "fb60739e-1dc3-481d-a056-ad72e665c680",
+      "name": "Rite of Replication",
+      "scryfall_id": "5032d71d-d9f8-498c-97d1-271c2e9c1c47",
+      "set": "soc",
+      "number": "202",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "348c67ef-9ccc-4651-9038-efdf1ad1b36a",
+      "name": "Rootha, Mastering the Moment",
+      "scryfall_id": "a5b3dbb2-c090-4118-9e47-56c16202572c",
+      "set": "soc",
+      "number": "8",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "3735559f-efe5-43ad-9b3e-3ef127c0ceda",
+      "name": "Rootha, Mercurial Artist",
+      "scryfall_id": "289abc0f-2ab9-48a7-a19b-a3630b014637",
+      "set": "soc",
+      "number": "329",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "515c522f-51d5-4f6d-b9b1-ea3c7f6a378e",
+      "name": "Rousing Refrain",
+      "scryfall_id": "2b3ec666-0e57-4c42-872c-51799e0b5c68",
+      "set": "soc",
+      "number": "253",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "f808b510-907a-4c3c-aea1-efb825c8e13e",
+      "name": "Scorched Geyser",
+      "scryfall_id": "5abdcad7-3b7a-43f6-a0ad-3aa99ee55c91",
+      "set": "soc",
+      "number": "54",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "0fe16212-66c3-4e45-a641-7391e9b2e304",
+      "name": "Shivan Reef",
+      "scryfall_id": "e13d0982-2542-4770-8e93-637478a0f84a",
+      "set": "soc",
+      "number": "404",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "05a039ad-1689-4d13-b393-6c1219583b5d",
+      "name": "Sleight of Hand",
+      "scryfall_id": "181fff80-4dea-47ee-a020-d8dc9ea7acdf",
+      "set": "7ed",
+      "number": "98",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487",
+      "name": "Sol Ring",
+      "scryfall_id": "870ec754-a76c-40ea-9b81-81b3dca1f62c",
+      "set": "soc",
+      "number": "128",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "00c0543c-2a1f-4425-8283-4062d74a1637",
+      "name": "Solemn Simulacrum",
+      "scryfall_id": "29fae212-b757-4e5f-ad9b-06cd09782f9f",
+      "set": "soc",
+      "number": "355",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "33a4e73d-d93a-4b6f-88ff-cd53f20d178c",
+      "name": "Spectacle Summit",
+      "scryfall_id": "a0a66f7b-eab4-45da-8895-c2c2c7eb05f8",
+      "set": "sos",
+      "number": "262",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "d64b0848-0193-4025-ba62-63ecd8fb9f50",
+      "name": "Spell Pierce",
+      "scryfall_id": "bc8f80e2-dd9d-4abc-b44c-fbef4d403e6f",
+      "set": "soa",
+      "number": "23",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "17039058-822d-409f-938c-b727a366ba63",
+      "name": "Steam Vents",
+      "scryfall_id": "b66daa94-d367-4812-9f18-f35378c1febb",
+      "set": "ecl",
+      "number": "267",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "a145ff8c-5812-4bcb-bd16-9839dc25121d",
+      "name": "Storm-Kiln Artist",
+      "scryfall_id": "da7ae8e0-cb6b-4386-8a30-9527d1af9be5",
+      "set": "soc",
+      "number": "255",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "b2252471-01ca-4d58-aa99-4ab0aa5eae12",
+      "name": "Stormcatch Mentor",
+      "scryfall_id": "f1bbb5ad-a293-48f3-a3d0-7ac85a7b8467",
+      "set": "soc",
+      "number": "331",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "f0881756-de74-43b1-a9fe-c2fde93faf5a",
+      "name": "Subterranean Tremors",
+      "scryfall_id": "02a20564-90af-4dbd-bf5c-debc49e4f391",
+      "set": "soa",
+      "number": "48",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "6a6c5e17-6465-4a1f-9d63-8a3ce2edc522",
+      "name": "Sulfur Falls",
+      "scryfall_id": "56a6df05-f4e4-40d9-a701-6d5adb7ce9fd",
+      "set": "soc",
+      "number": "408",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "8ea414c1-88cf-46d4-9a54-6dee9847c537",
+      "name": "Surge to Victory",
+      "scryfall_id": "b5345934-60eb-417c-9716-477882c4796d",
+      "set": "soc",
+      "number": "256",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "14d2979d-5728-42d7-a027-0eb1f754655d",
+      "name": "Talisman of Creativity",
+      "scryfall_id": "101e47ed-4afe-4d15-b6c3-4ab495965fde",
+      "set": "soc",
+      "number": "357",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "79f94050-d850-41ca-b1db-5ae0cf743f0a",
+      "name": "Temple of Epiphany",
+      "scryfall_id": "cc63cd97-de9e-4d31-babb-aaad1277169e",
+      "set": "soc",
+      "number": "412",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "cfdd5dc6-593e-495a-8cfe-3a56b3c4c7df",
+      "name": "Temple of the False God",
+      "scryfall_id": "1024f555-e0d7-48ac-b86e-c87290eac832",
+      "set": "soc",
+      "number": "416",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "1bd3e453-aa21-4ee6-95c2-d6d920ee8e7a",
+      "name": "Terramorphic Expanse",
+      "scryfall_id": "9a4c5629-fadd-42b9-850f-9f8586a2ca50",
+      "set": "sos",
+      "number": "265",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "88d0a394-79e2-42ac-9a37-1a7b78231941",
+      "name": "Thunderclap Drake",
+      "scryfall_id": "313fed71-cfbe-4c83-9437-ac14b2cb159b",
+      "set": "soc",
+      "number": "204",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "5b6bdf5a-2742-4851-92cd-a857a3852836",
+      "name": "Treasure Cruise",
+      "scryfall_id": "42c45880-15c7-4259-8066-c04d031d8216",
+      "set": "soc",
+      "number": "205",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "9aef7510-9f06-4939-8cae-f71330d1105e",
+      "name": "Turbulent Springs",
+      "scryfall_id": "a25cb813-aa6d-469c-aa29-61ffa32267f2",
+      "set": "soc",
+      "number": "57",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "83cf1169-5853-4332-b897-7b17d72d76ab",
+      "name": "Twinflame",
+      "scryfall_id": "85c863ef-b266-410d-87b3-ced791f99966",
+      "set": "soc",
+      "number": "258",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "d57a6b19-bd06-4b07-8ee1-0b45612ba9e4",
+      "name": "Veyran, Voice of Duality",
+      "scryfall_id": "1cb06c70-7ff2-4c88-9931-1bfe8a3226d9",
+      "set": "soc",
+      "number": "337",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "9c2fd3a3-96f2-4e84-85a9-77698c2f83aa",
+      "name": "Volcanic Salvo",
+      "scryfall_id": "fdd9dda5-0386-45a4-aec1-853137281934",
+      "set": "soc",
+      "number": "259",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "ec2968fb-163d-4907-862b-b84a1f167833",
+      "name": "Volcanic Torrent",
+      "scryfall_id": "bddd4336-ef03-4c4e-9992-02a0548d2d6f",
+      "set": "soc",
+      "number": "260",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "31f15274-301b-47c5-ba19-0ced04520878",
+      "name": "Wayfarer's Bauble",
+      "scryfall_id": "3db8fc1d-69fa-4a88-8f12-11fd614aac01",
+      "set": "5dn",
+      "number": "165",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    }
+  ]
+}

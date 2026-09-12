@@ -1,0 +1,821 @@
+{
+  "deck_id": "hazel",
+  "name": "Hazel",
+  "format": "commander",
+  "commander_scryfall_id": null,
+  "manabox_binder": "Hazel",
+  "status": "building",
+  "notes": "Seeded from ManaBox snapshot 1.",
+  "cards": [
+    {
+      "oracle_id": "f36d1d8b-8303-44a9-ab56-531931641ea2",
+      "name": "Academy Manufactor",
+      "scryfall_id": "2f5b4544-70d9-45ee-84a3-fa6253a53a82",
+      "set": "blc",
+      "number": "264",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "695eea46-1535-48c5-bbb6-0b8379e77bfc",
+      "name": "Arasta of the Endless Web",
+      "scryfall_id": "6dda8d6b-fd31-4908-a953-20c180a33e56",
+      "set": "blc",
+      "number": "205",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "0bc7f093-bef0-4f1a-852c-4b75ebf54838",
+      "name": "Arcane Signet",
+      "scryfall_id": "28180667-cc1e-4f64-9a69-00425ef85ba0",
+      "set": "blc",
+      "number": "127",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "326ba371-124c-4949-a048-3a0c8962e567",
+      "name": "Barren Moor",
+      "scryfall_id": "1517f3b6-579d-472f-a44e-ad7545407509",
+      "set": "blc",
+      "number": "292",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "c7f33cea-2ec8-4081-9208-a5b1d86721b3",
+      "name": "Bastion of Remembrance",
+      "scryfall_id": "3be363dc-70f0-4de3-b7de-5e4db2264883",
+      "set": "blc",
+      "number": "179",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "11b5308d-5bc0-4782-875f-a28be36e665d",
+      "name": "Beastmaster Ascension",
+      "scryfall_id": "1bccf8a9-d135-431e-bcc0-15ab29f8f8cb",
+      "set": "blc",
+      "number": "118",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "90194ff1-db61-463f-b5a3-15cd85311d0e",
+      "name": "Beledros Witherbloom",
+      "scryfall_id": "ac47e057-86e0-4774-a3e9-b256ab317ba0",
+      "set": "blc",
+      "number": "247",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "4050e5b3-07c2-461c-9852-a2c081c0198d",
+      "name": "Binding the Old Gods",
+      "scryfall_id": "c04bcc93-78b6-4e30-9129-76e2f4b60230",
+      "set": "blc",
+      "number": "248",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "5c6c8fe7-3520-423b-a224-1c0af516871a",
+      "name": "Casualties of War",
+      "scryfall_id": "c579edb6-acba-4e44-b3d6-693cd4e0e2d8",
+      "set": "blc",
+      "number": "125",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "f15b3b76-d38a-48db-bb44-3296183c8641",
+      "name": "Chatterfang, Squirrel General",
+      "scryfall_id": "72ab0422-eba0-4e1e-9626-ef31b836dcd2",
+      "set": "blc",
+      "number": "209",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "7e6c7b57-bd6a-4ac8-bcab-c3a879f479c2",
+      "name": "Chatterstorm",
+      "scryfall_id": "9426c906-e665-40a4-823a-0245bc39fbda",
+      "set": "blc",
+      "number": "210",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "8b1aa532-4f19-407e-83a5-13b3160ad8c2",
+      "name": "Chittering Witch",
+      "scryfall_id": "16e8e655-2da1-46c9-b9fb-223dd366698b",
+      "set": "blc",
+      "number": "180",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "4a338863-d599-46e7-9c30-e11b898ae1b0",
+      "name": "Chitterspitter",
+      "scryfall_id": "f0b80608-1455-4899-9d19-1b1d2d068744",
+      "set": "blc",
+      "number": "211",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "0895c9b7-ae7d-4bb3-af17-3b75deb50a25",
+      "name": "Command Tower",
+      "scryfall_id": "63a39996-48b7-42bb-9759-a42382ee0468",
+      "set": "blc",
+      "number": "130",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "457af74a-02b3-4659-846d-63e482667f34",
+      "name": "Deadly Dispute",
+      "scryfall_id": "61f2155e-c3b2-4c8e-b5b0-25dd5e29228c",
+      "set": "blc",
+      "number": "181",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "932668fa-d6e3-41c0-ad0c-8e0a00e68d11",
+      "name": "Decree of Pain",
+      "scryfall_id": "e64e60e8-67a3-4329-8232-d0f73c09be62",
+      "set": "blc",
+      "number": "182",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "80e9a42e-f4f4-4bfc-91a2-ad124737dca2",
+      "name": "Deep Forest Hermit",
+      "scryfall_id": "f712e233-1de8-45e4-9225-790d608ac90b",
+      "set": "blc",
+      "number": "213",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "69b52907-8aff-4f2a-a391-7d1ab2669b5c",
+      "name": "End-Raze Forerunners",
+      "scryfall_id": "6e4566f9-a6f5-420e-8ab8-ca505facc3d9",
+      "set": "blc",
+      "number": "214",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "27b047e3-0d41-45e2-98e9-9391d7923a1e",
+      "name": "Exotic Orchard",
+      "scryfall_id": "e6d8d98d-29b2-4ca2-bbda-4db2e8f6ae0b",
+      "set": "blc",
+      "number": "131",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "e0cef79c-ad47-4cbc-9d73-a913e487ccb7",
+      "name": "Garruk, Cursed Huntsman",
+      "scryfall_id": "3874f322-9847-4a63-b7e1-718abbe1e0bd",
+      "set": "blc",
+      "number": "99",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "f2f09757-1931-47c0-a5f0-39280445489d",
+      "name": "Gilded Goose",
+      "scryfall_id": "8d3facb6-314c-4dd2-a570-4515c596163c",
+      "set": "blc",
+      "number": "221",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "1b301478-b14f-4ef8-94e6-9647d582eabe",
+      "name": "Golgari Rot Farm",
+      "scryfall_id": "5fe6e199-26b5-4744-9748-f64ecadefc2f",
+      "set": "blc",
+      "number": "308",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "1cf51f50-24e4-48d0-95b3-1dad3ffa4bf5",
+      "name": "Golgari Signet",
+      "scryfall_id": "6a41e111-659e-4521-890f-19d814054dfc",
+      "set": "blc",
+      "number": "272",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "e802bf11-d3c7-4aad-8e85-99b39ff50d70",
+      "name": "Gourmand's Talent",
+      "scryfall_id": "89670a1b-a6f1-491d-bbb4-92e3382da653",
+      "set": "blc",
+      "number": "31",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "5effaa94-7f87-4485-8959-473d584c5034",
+      "name": "Grim Backwoods",
+      "scryfall_id": "dcad6aed-4694-4a5e-9a27-e9cced43a29f",
+      "set": "blc",
+      "number": "309",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "b0b58a03-462c-4964-97c7-42bc777ec23e",
+      "name": "Haunted Mire",
+      "scryfall_id": "a3ed4f23-b237-425e-9d26-f90d70713f7b",
+      "set": "blc",
+      "number": "311",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "749d2994-44e7-40d3-8630-7bebed239e9e",
+      "name": "Haywire Mite",
+      "scryfall_id": "de49db1e-3cb7-4f1a-9637-23e5820a0144",
+      "set": "blc",
+      "number": "274",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "845b40b1-dc09-44fa-9910-22544c1424ba",
+      "name": "Hazel of the Rootbloom",
+      "scryfall_id": "1269ca79-907e-4932-9e77-a9a5d2929060",
+      "set": "blc",
+      "number": "2",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "e8180024-1979-4677-9a0d-e08d4b7c825a",
+      "name": "Hazel's Brewmaster",
+      "scryfall_id": "52af8b70-a9c8-40d7-99da-fa51dc293688",
+      "set": "blc",
+      "number": "17",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "44bffa3e-4d31-4f9b-829c-e2066ab2f641",
+      "name": "Honored Dreyleader",
+      "scryfall_id": "bc5ee537-52e1-474a-9326-dfacc2a758ab",
+      "set": "blb",
+      "number": "178",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "4f31eea0-61b9-467d-8393-0ab9f1b6e882",
+      "name": "Insatiable Frugivore",
+      "scryfall_id": "2ef58a8f-ce72-40c2-b032-818cc16267ce",
+      "set": "blc",
+      "number": "18",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "3d081701-514b-4611-b5a1-239b8f335fb6",
+      "name": "Insectoid Exterminator",
+      "scryfall_id": "ff26f7ff-7f70-4204-9b48-de9e21dc89ec",
+      "set": "tmt",
+      "number": "64",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "6de714e1-446d-4fb9-9e3d-bcd3ec6af9ca",
+      "name": "Jungle Hollow",
+      "scryfall_id": "5401ef4c-b1e8-4f37-abe8-25c405d4f6ea",
+      "set": "blc",
+      "number": "313",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "68954295-54e3-4303-a6bc-fc4547a4e3a3",
+      "name": "Llanowar Elves",
+      "scryfall_id": "ed8a8cfd-baef-4198-b1f3-4926139588b2",
+      "set": "7ed",
+      "number": "253",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "32116127-cf96-4a1b-8896-a1ebc087b597",
+      "name": "Llanowar Wastes",
+      "scryfall_id": "f01e0e0e-f8c1-416d-bf4b-2b7661924e9b",
+      "set": "blc",
+      "number": "315",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "95ce305f-34bc-4d6d-b7ba-ffd4b2a25336",
+      "name": "Maelstrom Pulse",
+      "scryfall_id": "d8f4d07b-2fc1-4d86-865b-b35526850c8e",
+      "set": "blc",
+      "number": "126",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "9b2cdbed-c733-409b-b0e4-2c8960c25111",
+      "name": "Maskwood Nexus",
+      "scryfall_id": "9a8456d9-30dd-4acf-9255-e9540886df37",
+      "set": "blc",
+      "number": "279",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "68639a3d-2192-4921-8298-c76bb0cd6b02",
+      "name": "Moldervine Reclamation",
+      "scryfall_id": "ab923455-5d5d-495e-ac93-ae0f01e0605e",
+      "set": "blc",
+      "number": "255",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "cf9190e0-6f53-44fb-8afa-c16f5bf9829e",
+      "name": "Moonstone Eulogist",
+      "scryfall_id": "13158f3b-9d85-4689-9afa-7d9a8a2d1b09",
+      "set": "blc",
+      "number": "19",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "322f44f0-e6da-4ee0-b474-e7d5e9a461c5",
+      "name": "Morbid Opportunist",
+      "scryfall_id": "318370d0-1c12-4228-b2c9-2a766e234091",
+      "set": "blc",
+      "number": "183",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "391978f6-0bbc-41e8-9246-f7d0e21c7900",
+      "name": "Nadier's Nightblade",
+      "scryfall_id": "b533e358-3b30-4719-a2a3-13fb9ea817c6",
+      "set": "blc",
+      "number": "184",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "761ee6f9-b0fa-43c9-8d1f-9591ea18e52d",
+      "name": "Necroblossom Snarl",
+      "scryfall_id": "078de083-d86c-4d51-b38f-58991c0d0e0a",
+      "set": "blc",
+      "number": "319",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "bfa882ee-de18-4ef8-8957-3e04ed6e3c1e",
+      "name": "Nested Shambler",
+      "scryfall_id": "202011d5-755e-497b-b4a7-f2b6e6a0b464",
+      "set": "blc",
+      "number": "185",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "7ffae8f8-3006-4969-a339-6d30678f87ea",
+      "name": "Night's Whisper",
+      "scryfall_id": "61f0c6f6-b90d-4eb1-a5db-86e0a3997501",
+      "set": "5dn",
+      "number": "55",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "0a5e3748-2e58-4e53-9653-8af4e21cf223",
+      "name": "Ogre Slumlord",
+      "scryfall_id": "b70293ae-d50d-44bf-aaa3-689727056ec5",
+      "set": "blc",
+      "number": "186",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "e88027a6-24cc-4a8b-86db-734f26149ea8",
+      "name": "Oran-Rief, the Vastwood",
+      "scryfall_id": "fc3d73d8-47cd-481c-ae13-9d993fd54420",
+      "set": "blc",
+      "number": "320",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "b473e293-59e3-4e04-acf2-622604aeb25f",
+      "name": "Path of Ancestry",
+      "scryfall_id": "821cb722-146d-447e-907d-dc97baa5bc4f",
+      "set": "blc",
+      "number": "322",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "aff9e844-9e03-490b-b44f-10d385738cc6",
+      "name": "Phyrexian Plaguelord",
+      "scryfall_id": "284f9e91-9318-44d9-995b-8c00752a3b01",
+      "set": "8ed",
+      "number": "153",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "2e3ee458-fa3f-4452-ab95-5a7fb5a0483b",
+      "name": "Plaguecrafter",
+      "scryfall_id": "7092aa38-4f05-4b18-b894-d55ca9fe9b15",
+      "set": "blc",
+      "number": "187",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "b099fc54-cdbc-46cb-b4e4-7c2ca77b115b",
+      "name": "Plumb the Forbidden",
+      "scryfall_id": "eaea189c-9973-435e-975d-dc47a331b28a",
+      "set": "blc",
+      "number": "188",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "d0e810bb-5f38-4045-a718-30d423c05659",
+      "name": "Poison-Tip Archer",
+      "scryfall_id": "b7e92375-037c-4be1-8183-6261e0666e12",
+      "set": "blc",
+      "number": "256",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "da785227-cf8a-4d44-9e7c-fc909ea868f2",
+      "name": "Prosperous Innkeeper",
+      "scryfall_id": "eed76e15-6456-4ddc-addf-f0e6eff8bb6a",
+      "set": "blc",
+      "number": "121",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "9b271430-f53d-42d6-a547-2f286dd9bcb6",
+      "name": "Putrefy",
+      "scryfall_id": "916b3272-1b36-4c4e-b773-0bc696a7ef98",
+      "set": "blc",
+      "number": "257",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "8fb48d65-406b-4231-83ea-9cf3bb8dff76",
+      "name": "Ravenous Squirrel",
+      "scryfall_id": "fe425d81-833f-4ab9-b0e4-a1fa8ed26426",
+      "set": "blc",
+      "number": "258",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "ffe13100-99dd-41e3-82ba-eaead6fd0113",
+      "name": "Rootcast Apprenticeship",
+      "scryfall_id": "00756441-a734-4960-9c69-f03a508a1522",
+      "set": "blc",
+      "number": "32",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "eea18c55-8695-4ba1-9b38-3e7638692f5f",
+      "name": "Saw in Half",
+      "scryfall_id": "90f8de01-c1bd-4533-9e98-61e7d25dcf88",
+      "set": "blc",
+      "number": "113",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "3beed054-a099-4887-b1bd-39cf9e514e94",
+      "name": "Scurry of Squirrels",
+      "scryfall_id": "c343b965-af2b-45c3-babb-9242736cf1e5",
+      "set": "blc",
+      "number": "33",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "61a6341e-0d36-44b6-8026-9c87c8ef61cb",
+      "name": "Second Harvest",
+      "scryfall_id": "1ee78a73-10af-461a-9fd3-962fc1f0ccb0",
+      "set": "blc",
+      "number": "123",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "d1d171de-1c6d-4fb9-817a-9c689c709f3d",
+      "name": "Shamanic Revelation",
+      "scryfall_id": "b4e193e8-1127-475b-9af6-d0d0c44adf49",
+      "set": "blc",
+      "number": "237",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "65986c1b-8e51-4604-b685-d82fa7d1263a",
+      "name": "Skullclamp",
+      "scryfall_id": "97b729d3-5965-4e16-a50a-1e9bf51a9f13",
+      "set": "blc",
+      "number": "283",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "67158085-4807-4f0e-8599-c55ec7ec252e",
+      "name": "Skyfisher Spider",
+      "scryfall_id": "e18927dd-c50c-4fb2-8d4c-d0f853b68294",
+      "set": "blc",
+      "number": "261",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487",
+      "name": "Sol Ring",
+      "scryfall_id": "fff440c0-7e6a-46c2-9989-f1b5af20fd44",
+      "set": "blc",
+      "number": "129",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "2d584333-b25e-4291-a2c9-80c6d9f8732a",
+      "name": "Squirrel Nest",
+      "scryfall_id": "bac26044-b41f-4c75-8bc1-26359250d8bc",
+      "set": "blc",
+      "number": "239",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "f43d1ea5-8127-4b64-a87b-ee5cc9b9e9fa",
+      "name": "Squirrel Sovereign",
+      "scryfall_id": "b4356e13-655b-40b8-ad08-4e28b7464a3c",
+      "set": "blc",
+      "number": "240",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "4b508087-99da-4eb1-8b12-29162f2ec85d",
+      "name": "Swarmyard",
+      "scryfall_id": "5dd51c2a-99ad-4866-9e0c-162746cb04d3",
+      "set": "blc",
+      "number": "133",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "50e7ae38-2a66-4e32-bfb3-fefbae0caa61",
+      "name": "Swarmyard Massacre",
+      "scryfall_id": "8486f472-afad-4fdd-a57a-d20d8871b543",
+      "set": "blc",
+      "number": "20",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "6ede28a7-57ea-47d6-a5fb-b0f061da2689",
+      "name": "Sword of the Squeak",
+      "scryfall_id": "a3f4d41d-69a5-412f-aa25-f1acc5cacab2",
+      "set": "blc",
+      "number": "40",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "fa6d05a1-3df4-4751-b1a0-8d9693faec73",
+      "name": "Tainted Wood",
+      "scryfall_id": "156de082-e159-4830-867e-1b3bb8338291",
+      "set": "blc",
+      "number": "337",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "42b8aa14-10bc-4bd6-88d9-4bb287eadd19",
+      "name": "Talisman of Resilience",
+      "scryfall_id": "49766e23-74f5-4d6a-a882-53127028face",
+      "set": "blc",
+      "number": "288",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "610af0f7-b5e3-43fb-9d02-7c59bd99034c",
+      "name": "Tear Asunder",
+      "scryfall_id": "1c81a779-6b91-4de2-9065-d6821a787e7d",
+      "set": "blc",
+      "number": "241",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "dc55421f-dee8-4263-9df0-2365df5f14bb",
+      "name": "Temple of Malady",
+      "scryfall_id": "4685198b-d40e-47be-8632-af4a1e71e7a1",
+      "set": "blc",
+      "number": "341",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "1d9d8028-d946-4245-ae0c-7508023f619a",
+      "name": "The Odd Acorn Gang",
+      "scryfall_id": "791d9ea0-c70a-47a6-b8a3-0f5d36a5c44d",
+      "set": "blc",
+      "number": "7",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "ab8d5f5c-1976-4f77-8ed2-8d28ee666741",
+      "name": "Tireless Provisioner",
+      "scryfall_id": "ac73d130-ceb6-41ea-af0d-314d5adba9e6",
+      "set": "blc",
+      "number": "243",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "a8e707ec-ce77-4bc5-8c76-5ea3e81e8c7f",
+      "name": "Toski, Bearer of Secrets",
+      "scryfall_id": "0b261989-b34e-4bba-90f8-2adfda58c89b",
+      "set": "blc",
+      "number": "244",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "db623754-e078-4030-ba07-818803c348a8",
+      "name": "Twilight Mire",
+      "scryfall_id": "142a605f-ec69-43eb-bdde-dd9e29f9fd22",
+      "set": "blc",
+      "number": "351",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "6bd6d259-1af7-4dff-a79c-48a616d2a36e",
+      "name": "Viridescent Bog",
+      "scryfall_id": "991fca57-eb30-40e7-a443-784a104625b5",
+      "set": "blc",
+      "number": "352",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "3adbd963-e85d-4569-963a-4472594f06f9",
+      "name": "Woe Strider",
+      "scryfall_id": "05b2af75-2e29-446b-b3d0-00b5e5d50b3c",
+      "set": "blc",
+      "number": "189",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "7579f57d-c76e-4703-a030-34fb7160cb23",
+      "name": "Wolfwillow Haven",
+      "scryfall_id": "8506e3eb-07c1-4f5c-a2a7-c210acf6be16",
+      "set": "blc",
+      "number": "246",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "8973bd99-20f8-4867-90ef-50392147ee1b",
+      "name": "Wood Elves",
+      "scryfall_id": "77f95da2-cbc4-4430-adb7-75f4c469d98e",
+      "set": "cma",
+      "number": "170",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "c9fe1383-1331-4a58-a45a-3320250221a9",
+      "name": "Woodland Cemetery",
+      "scryfall_id": "7ab2f083-b674-4f8d-897b-9dc84ff85658",
+      "set": "blc",
+      "number": "354",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "62511d43-8eaf-405a-9c81-7bd593d3a01e",
+      "name": "Ygra, Eater of All",
+      "scryfall_id": "b9ac7673-eae8-4c4b-889e-5025213a6151",
+      "set": "blb",
+      "number": "241",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    }
+  ]
+}

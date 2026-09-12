@@ -1,0 +1,351 @@
+{
+  "deck_id": "ben-golgari",
+  "name": "Ben - Golgari ⚫️🟢",
+  "format": "commander",
+  "commander_scryfall_id": null,
+  "manabox_binder": "Ben - Golgari ⚫️🟢",
+  "status": "building",
+  "notes": "Seeded from ManaBox snapshot 1.",
+  "cards": [
+    {
+      "oracle_id": "5905c55a-f1d1-4021-a9af-f85b02ae21f3",
+      "name": "Audacious Thief",
+      "scryfall_id": "541b52de-e347-4ce2-b207-8079be664f9e",
+      "set": "j25",
+      "number": "401",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "4eb8d877-ee46-4bbe-99da-fee9e238ca58",
+      "name": "Audacity",
+      "scryfall_id": "40b0813a-38cf-4a07-81d6-91d24af8b549",
+      "set": "bro",
+      "number": "169",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "39b4a47a-df51-4bd9-9a20-43ac80a5d352",
+      "name": "Balustrade Spy",
+      "scryfall_id": "dbd40dc5-26b3-4244-bfb8-62a0d88a2253",
+      "set": "j25",
+      "number": "402",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "15febce7-8320-4591-9535-ef11c8adecc2",
+      "name": "Barbed Bloodletter",
+      "scryfall_id": "8ff1a13c-e338-42e9-8eb3-b303fabd67de",
+      "set": "ecl",
+      "number": "86",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "5a651557-ce08-46ba-aecd-0e4fbfdef3c0",
+      "name": "Bile-Vial Boggart",
+      "scryfall_id": "2c0fcf98-1f3c-4cff-9234-7f3d0c8b22e9",
+      "set": "ecl",
+      "number": "87",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "70e247e5-6ca4-458c-9519-d19b400955f6",
+      "name": "Braulios of Pheres Band",
+      "scryfall_id": "01789cb2-a93d-4197-a40a-612423635125",
+      "set": "j25",
+      "number": "51",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "0b8defd2-8530-47d7-a0c6-27aa5162dff6",
+      "name": "Clear Shot",
+      "scryfall_id": "cfbea1eb-8270-416d-842c-c61d619a75df",
+      "set": "j25",
+      "number": "645",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "861fa80d-99e0-4332-a2b8-5aa959fd41a4",
+      "name": "Consume Spirit",
+      "scryfall_id": "f375a49c-806a-4d8b-9513-6b4afc19497b",
+      "set": "mrd",
+      "number": "60",
+      "quantity": 2,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "7c89ef4d-b375-4644-ac8b-034effdbe98c",
+      "name": "Eclipsed Elf",
+      "scryfall_id": "9c8579f3-6125-4f22-b1c2-b7a0cfc50eed",
+      "set": "ecl",
+      "number": "218",
+      "quantity": 3,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "1b6e0d65-202e-4fd3-861e-8d2eaffe3269",
+      "name": "Expedition Skulker",
+      "scryfall_id": "27b8c378-63dc-41b0-b7c9-6d784c78f037",
+      "set": "j25",
+      "number": "436",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "ad01df89-29fe-44c7-a133-91425f8ff09c",
+      "name": "Fake Your Own Death",
+      "scryfall_id": "271ac37f-305c-4918-8761-1779caa19f36",
+      "set": "j25",
+      "number": "440",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "773c7a1e-0f59-4606-a2fc-c47bda760ecd",
+      "name": "Foul Play",
+      "scryfall_id": "8e8fd73b-942a-44f1-85e3-bb599bccb05b",
+      "set": "j25",
+      "number": "442",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "5748ebf1-24e3-499d-ab7c-c2cebd462a24",
+      "name": "Giant Growth",
+      "scryfall_id": "aeece336-e5e8-4455-a297-c3739198d011",
+      "set": "bro",
+      "number": "183",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "a4f3df30-383b-47ad-8576-0ee69349faf5",
+      "name": "Go Forth",
+      "scryfall_id": "e4ed67f0-85cc-4b1d-b745-e13e5bea3397",
+      "set": "j25",
+      "number": "20",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "f19f28e5-9cad-4398-b2d4-9e7fefb23cb4",
+      "name": "Grazing Gladehart",
+      "scryfall_id": "1bc883ef-b954-4063-813d-baf8644aa0f6",
+      "set": "j25",
+      "number": "665",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "d416a4ed-9f16-4a8b-8aee-03c630e1eb6c",
+      "name": "Ivory Tower",
+      "scryfall_id": "5589bee7-ba0c-4d4f-9f7d-b49985a91382",
+      "set": "brr",
+      "number": "86",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "0b5d174c-7d4d-4c31-a582-8169d3bc932a",
+      "name": "Jadelight Ranger",
+      "scryfall_id": "bd117880-4e5d-4dd4-9719-6d6f5ecca91f",
+      "set": "j25",
+      "number": "676",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "d69b1e68-8d8e-460b-9eb4-6a68be886197",
+      "name": "Kodama of the West Tree",
+      "scryfall_id": "a4f53a56-eb8e-44cd-ab13-8ac068052c68",
+      "set": "j25",
+      "number": "78",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "24b5dbe3-578a-4897-8215-e723f00a8f1a",
+      "name": "Merfolk Branchwalker",
+      "scryfall_id": "47dacb66-f50c-4159-a6b1-0917d85a4ff8",
+      "set": "j25",
+      "number": "688",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "322f44f0-e6da-4ee0-b474-e7d5e9a461c5",
+      "name": "Morbid Opportunist",
+      "scryfall_id": "1f6ed601-3f89-4e8f-b806-f02b903fd8c7",
+      "set": "j25",
+      "number": "464",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "53e39011-3d77-4883-9c8e-4707f6fc5c47",
+      "name": "Orochi Merge-Keeper",
+      "scryfall_id": "51bcdae5-8081-4d26-b5b9-571c54d7d668",
+      "set": "j25",
+      "number": "695",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "495348d7-bc11-4209-8b0f-72db2e6c6993",
+      "name": "Primeval Herald",
+      "scryfall_id": "8e32d87c-99c9-4ba3-9d57-e36b6263e815",
+      "set": "j25",
+      "number": "702",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "1b3d7fce-e9fe-4176-9d9a-472415826cdd",
+      "name": "Pristine Talisman",
+      "scryfall_id": "78117d34-0325-4e80-8bcd-2b2be557c81c",
+      "set": "brr",
+      "number": "43",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "8345eb05-c04e-4c1d-9776-5ab7d91a7842",
+      "name": "Rev, Tithe Extractor",
+      "scryfall_id": "8bf88010-799d-4217-8e79-308bec7ad2ff",
+      "set": "j25",
+      "number": "45",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "2efea460-c3e1-4578-a587-134e13bdf264",
+      "name": "Runechanter's Pike",
+      "scryfall_id": "76252996-5b22-48ab-afa4-0cc2fe6a6878",
+      "set": "brr",
+      "number": "48",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "929117cd-caa6-402b-9d7b-1f684d75695c",
+      "name": "Scythecat Cub",
+      "scryfall_id": "b3dd3c7d-4685-4579-b483-14ddaaaddf5b",
+      "set": "j25",
+      "number": "24",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "6d2cf8b4-1468-4e00-94ca-65ef0c564b09",
+      "name": "Skyclave Pick-Axe",
+      "scryfall_id": "d5f1bdc5-79f4-4788-99ea-4ceab1545fc9",
+      "set": "j25",
+      "number": "712",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "1e6a24be-8281-41c1-a5ba-b68f0ef1d7b8",
+      "name": "Snakeskin Veil",
+      "scryfall_id": "211f84bc-a344-4f37-a15d-b47994ce0485",
+      "set": "j25",
+      "number": "713",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "96c4b51c-8a10-428c-a948-e1ba9c652bfd",
+      "name": "Stoic Grove-Guide",
+      "scryfall_id": "3d5a3e25-c17a-47b1-a36d-d24d50e5bab3",
+      "set": "ecl",
+      "number": "243",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "91f410c5-4313-462f-8d21-da63988d919f",
+      "name": "Sutina, Speaker of the Tajuru",
+      "scryfall_id": "1b794170-4ffd-4628-ba5a-b9293bb364dc",
+      "set": "j25",
+      "number": "56",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "3044a00d-7f88-47e8-9110-2e898b20416c",
+      "name": "Terror Ballista",
+      "scryfall_id": "31215674-0bcd-46f1-b8a1-5415f8b674d1",
+      "set": "bro",
+      "number": "290",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "84c0db59-255d-41af-a3d4-3f3548f1195f",
+      "name": "Thieves' Guild Enforcer",
+      "scryfall_id": "331a66e3-301c-4f91-9076-46f7634419c0",
+      "set": "j25",
+      "number": "493",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "7fe361ef-a168-4847-92a2-21c1661aac06",
+      "name": "Thieves' Tools",
+      "scryfall_id": "7c3faae3-a117-4d59-bc19-c85ceffe6021",
+      "set": "j25",
+      "number": "126",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "a8052556-8962-4130-86a8-6fb7b6a324f7",
+      "name": "Thriving Grove",
+      "scryfall_id": "b548551d-756b-496e-a1c0-4fa77707663d",
+      "set": "j25",
+      "number": "776",
+      "quantity": 2,
+      "role": "",
+      "status": "assigned"
+    }
+  ]
+}
