@@ -34,28 +34,51 @@ class ImportBlocked(Exception):
     """Import stopped on purpose. The message says what a human must decide."""
 
 
-def stage_snapshot(csv_path: str) -> str:
-    """Copy an export into data/snapshots/ under its export date. Never overwrites."""
+def _same_bytes(a_path: str, b_path: str) -> bool:
+    with open(a_path, "rb") as a, open(b_path, "rb") as b:
+        return a.read() == b.read()
+
+
+def stage_snapshot(csv_path: str) -> Tuple[str, str]:
+    """Copy an export into data/snapshots/. Returns (path, export_date).
+
+    Snapshots are immutable: an existing file is never overwritten. Re-importing
+    the identical file is a no-op and reuses it.
+
+    ManaBox's own download is just "ManaBox_Collection.csv" with no date, and
+    exporting twice in one day is normal -- you scan a few packs, export, scan
+    more, export again. So a same-day export with different content gets a time
+    suffix rather than being refused; refusing would make the tool useless on the
+    day you actually use it most.
+    """
     paths.ensure_dirs()
     date = manabox.export_date_from_filename(csv_path)
+    stamp = datetime.datetime.fromtimestamp(os.path.getmtime(csv_path))
     if not date:
-        stamp = datetime.datetime.fromtimestamp(os.path.getmtime(csv_path))
         date = stamp.strftime("%Y-%m-%d")
-    target = os.path.join(paths.SNAPSHOTS, "ManaBox_{}.csv".format(date.replace("-", "")))
 
-    if os.path.abspath(csv_path) == os.path.abspath(target):
-        return target
-    if os.path.exists(target):
-        with open(target, "rb") as a, open(csv_path, "rb") as b:
-            if a.read() == b.read():
-                return target
-        raise ImportBlocked(
-            "a different export already exists for {}:\n  {}\n"
-            "Snapshots are immutable. Rename the new file if it is a separate export."
-            .format(date, target)
-        )
-    shutil.copy2(csv_path, target)
-    return target
+    stems = [
+        (date.replace("-", ""), date),
+        (date.replace("-", "") + "T" + stamp.strftime("%H%M"),
+         date + "T" + stamp.strftime("%H:%M")),
+    ]
+    for index in range(2, 40):
+        stems.append((date.replace("-", "") + "T{}{}".format(stamp.strftime("%H%M"), index),
+                      date + "T{}-{}".format(stamp.strftime("%H:%M"), index)))
+
+    for stem, export_date in stems:
+        target = os.path.join(paths.SNAPSHOTS, "ManaBox_{}.csv".format(stem))
+        if os.path.abspath(csv_path) == os.path.abspath(target):
+            return target, export_date
+        if not os.path.exists(target):
+            shutil.copy2(csv_path, target)
+            return target, export_date
+        if _same_bytes(target, csv_path):
+            return target, export_date  # already imported; nothing to do
+
+    raise ImportBlocked(
+        "too many distinct exports already staged for {}. Move older snapshots "
+        "out of {} if you really need more.".format(date, paths.SNAPSHOTS))
 
 
 def snapshot_lots(conn, snapshot_id: int) -> Dict[manabox.LotKey, int]:
@@ -146,7 +169,7 @@ def run_import(
     log=print,
 ) -> dict:
     db.init(conn)
-    staged = stage_snapshot(csv_path)
+    staged, export_date = stage_snapshot(csv_path)
     log("snapshot: {}".format(os.path.relpath(staged, paths.ROOT)))
 
     parsed = manabox.parse(staged)
@@ -193,7 +216,6 @@ def run_import(
         scryfall.save_cache(cache)
 
     # ---- Write ----
-    export_date = manabox.export_date_from_filename(staged)
     existing = conn.execute(
         "SELECT snapshot_id FROM snapshots WHERE filename = ?",
         (os.path.basename(staged),)).fetchone()

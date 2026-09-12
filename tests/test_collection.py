@@ -365,3 +365,49 @@ class TestRebuild(unittest.TestCase):
             before = self._fingerprint(conn)
             conn.execute("DELETE FROM lots WHERE rowid IN (SELECT rowid FROM lots LIMIT 1)")
             self.assertNotEqual(self._fingerprint(conn), before)
+
+
+class TestStaging(unittest.TestCase):
+    """ManaBox's download is always named ManaBox_Collection.csv, with no date."""
+
+    def test_reimporting_the_identical_file_reuses_the_snapshot(self):
+        with Sandbox() as box:
+            path = box.csv(name="ManaBox_Collection.csv")
+            first, date_a = importer.stage_snapshot(path)
+            second, date_b = importer.stage_snapshot(path)
+            self.assertEqual(first, second)
+            self.assertEqual(date_a, date_b)
+            staged = os.listdir(paths.SNAPSHOTS)
+            self.assertEqual(len(staged), 1)
+
+    def test_a_second_export_the_same_day_gets_its_own_snapshot(self):
+        """Scan packs, export, scan more, export again -- all in one afternoon."""
+        with Sandbox() as box:
+            first_path = box.csv(name="ManaBox_Collection.csv")
+            first, _ = importer.stage_snapshot(first_path)
+
+            rows = helpers.default_rows()
+            rows.append(row("ToSort", "binder", SOL_B, "Sol Ring", "blc", "129", 4))
+            second_path = box.csv(rows, name="ManaBox_Collection_v2.csv")
+            os.utime(second_path, (0, os.path.getmtime(first_path)))
+            second, _ = importer.stage_snapshot(second_path)
+
+            self.assertNotEqual(first, second)
+            self.assertEqual(len(os.listdir(paths.SNAPSHOTS)), 2)
+            # The originals must both survive untouched.
+            self.assertFalse(importer._same_bytes(first, second))
+
+    def test_two_same_day_exports_produce_a_delta_in_the_right_order(self):
+        with Sandbox() as box:
+            conn = box.conn()
+            first_path = box.csv(name="ManaBox_Collection.csv")
+            importer.run_import(conn, first_path, offline=True, log=lambda *a: None)
+
+            rows = helpers.default_rows()
+            rows.append(row("ToSort", "binder", SOL_B, "Sol Ring", "blc", "129", 4))
+            second_path = box.csv(rows, name="ManaBox_Collection_v2.csv")
+            os.utime(second_path, (0, os.path.getmtime(first_path)))
+            result = importer.run_import(conn, second_path, offline=True,
+                                         log=lambda *a: None)
+
+            self.assertEqual(importer.summarise(result["changes"]), {"added": 4})

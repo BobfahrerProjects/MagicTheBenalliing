@@ -340,6 +340,8 @@ def build_parser():
     p.set_defaults(func=cmd_find)
 
     p = sub.add_parser("tag", help="art tagging (the only step that costs money)")
+    p.add_argument("--dry-run", action="store_true",
+                   help="count artworks and estimate cost (the default)")
     p.add_argument("--submit", action="store_true")
     p.add_argument("--collect", action="store_true")
     p.add_argument("--status", action="store_true")
