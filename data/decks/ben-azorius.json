@@ -1,0 +1,301 @@
+{
+  "deck_id": "ben-azorius",
+  "name": "Ben - Azorius ⚪️🔵",
+  "format": "commander",
+  "commander_scryfall_id": null,
+  "manabox_binder": "Ben - Azorius ⚪️🔵",
+  "status": "building",
+  "notes": "Seeded from ManaBox snapshot 1.",
+  "cards": [
+    {
+      "oracle_id": "8a5e17a0-6f3c-49ed-b328-ed90a46ed6c5",
+      "name": "Burdened Stoneback",
+      "scryfall_id": "3278b8d0-3d2b-4d3d-bbf1-fd9b714b53ed",
+      "set": "ecl",
+      "number": "8",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "311eef28-21e9-44fa-96df-d281f0a9ba34",
+      "name": "Dawn-Blessed Pennant",
+      "scryfall_id": "294266b6-0343-4fa5-90b8-0adf7df490e4",
+      "set": "ecl",
+      "number": "254",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "c892d28c-4a78-4a7f-b8d5-c3663b819c5e",
+      "name": "Deepchannel Duelist",
+      "scryfall_id": "1b742172-7118-45e7-9945-62bd77d94e85",
+      "set": "ecl",
+      "number": "213",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "f70d65bf-5f1c-4aee-9bd1-f5ee6974b058",
+      "name": "Flaring Cinder",
+      "scryfall_id": "0691a1a9-18e7-44b7-9a34-764b1ab45a76",
+      "set": "ecl",
+      "number": "225",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "4e0ba9d5-4bd6-49a0-ae00-70818738d0ba",
+      "name": "Gallant Fowlknight",
+      "scryfall_id": "fb6096ba-8083-4207-9a3f-c1e4ff095204",
+      "set": "ecl",
+      "number": "17",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "9f6d6e90-7462-46e5-bf2f-725b4badc394",
+      "name": "Gathering Stone",
+      "scryfall_id": "81dfbfe1-143a-4637-b683-a34cfc51993d",
+      "set": "ecl",
+      "number": "257",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "a2099033-42d9-47ac-90c7-b41b55b7dadd",
+      "name": "Hurkyl's Final Meditation",
+      "scryfall_id": "5577f345-9577-42f8-b244-089b9a7c2e56",
+      "set": "bro",
+      "number": "52",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "61cb927a-4cf8-49d6-ab4b-9e882bc08774",
+      "name": "Keep Out",
+      "scryfall_id": "4ab1601c-634c-4f21-8926-ba3cb92008c1",
+      "set": "ecl",
+      "number": "19",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "da35de40-6fde-4018-bda8-b0ae91ed872a",
+      "name": "Kinbinding",
+      "scryfall_id": "b6e35fd5-de7e-40a8-a23c-00d07fd1ac56",
+      "set": "ecl",
+      "number": "20",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "845d80ee-1cd5-437a-90a5-40dcc657d3aa",
+      "name": "Kinsbaile Aspirant",
+      "scryfall_id": "56dfdab1-ea3f-4663-a855-a9e72505f85e",
+      "set": "ecl",
+      "number": "21",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "d709f396-021f-49eb-adb5-374aa790eaae",
+      "name": "Merrow Skyswimmer",
+      "scryfall_id": "075b419a-fd44-4a9a-8c40-474562b7e11a",
+      "set": "ecl",
+      "number": "234",
+      "quantity": 2,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "c910c1c0-2b78-4e0f-bb55-e0581b2e07e8",
+      "name": "Military Discipline",
+      "scryfall_id": "94778e17-87c4-4765-b2f0-40455069f2c4",
+      "set": "bro",
+      "number": "17",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "fe7a4361-561a-4bab-921e-d01bab19dad3",
+      "name": "Mischievous Sneakling",
+      "scryfall_id": "3b66fa00-2fa6-4060-9e7f-8e3fde6deb73",
+      "set": "ecl",
+      "number": "235",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "e1708ad9-35d4-4243-92ca-ddf9d129aa32",
+      "name": "Personify",
+      "scryfall_id": "1172582d-fb2d-4022-95b1-e48b03df3a95",
+      "set": "ecl",
+      "number": "28",
+      "quantity": 3,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "faf2f368-a7e7-4427-bc03-929f294b1e03",
+      "name": "Prideful Feastling",
+      "scryfall_id": "7578cb61-f606-4559-a10a-343a583228ab",
+      "set": "ecl",
+      "number": "238",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "ce60402c-34cd-44fe-ae1d-4a5404298f5b",
+      "name": "Reaping Willow",
+      "scryfall_id": "97c33cc2-3573-410a-908b-c0392fff524b",
+      "set": "ecl",
+      "number": "240",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "162dcfa0-36e4-41cd-8322-08e810ff04d4",
+      "name": "Reluctant Dounguard",
+      "scryfall_id": "dbce93c0-5efc-4b60-9cef-9d9b374d397b",
+      "set": "ecl",
+      "number": "31",
+      "quantity": 2,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "0bdebad7-a05e-439a-b5a9-241a2d09f943",
+      "name": "Riverguard's Reflexes",
+      "scryfall_id": "88a79f3e-ca74-467c-b0a8-22802ac5b465",
+      "set": "ecl",
+      "number": "33",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "4288ba56-ddd0-4bd9-ba61-daf03e9f2d7f",
+      "name": "Shore Lurker",
+      "scryfall_id": "bb353c27-e311-4677-9277-cab6820562ce",
+      "set": "ecl",
+      "number": "34",
+      "quantity": 2,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "dcf07f38-422f-46c3-aee9-50540b9c9115",
+      "name": "Silvergill Mentor",
+      "scryfall_id": "e6e37fe8-459c-4992-8ae9-f782cddab2fe",
+      "set": "ecl",
+      "number": "69",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "08688903-d9cc-4d57-ba91-14a8523551b9",
+      "name": "Silvergill Peddler",
+      "scryfall_id": "feba2bb6-6005-4ade-a4c5-97bbd54b43a3",
+      "set": "ecl",
+      "number": "70",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "f64878c1-1fba-44f7-a24f-d24bef2e03ae",
+      "name": "Slippery Bogle",
+      "scryfall_id": "a4ad7a05-20af-4f7a-9dc2-7ce89356364c",
+      "set": "spg",
+      "number": "144",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "38877c68-b69b-4ee1-8e8f-5137a184a8f7",
+      "name": "Spell Snare",
+      "scryfall_id": "b7551b61-656e-4f37-b9da-73174db983b7",
+      "set": "ecl",
+      "number": "71",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "d8599f06-f030-4575-8497-307a4d7ec182",
+      "name": "Spiral into Solitude",
+      "scryfall_id": "e7a12664-a930-4159-8311-19862488fb05",
+      "set": "ecl",
+      "number": "36",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "991f4eec-cf3e-4554-ba88-c44bb0d255f0",
+      "name": "Tributary Vaulter",
+      "scryfall_id": "a1db2c83-41d1-4cc6-b9a3-fed504b01127",
+      "set": "ecl",
+      "number": "40",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "d0a38e8c-c42c-4c99-8a44-d390ff2511ff",
+      "name": "Unwelcome Sprite",
+      "scryfall_id": "902f8d86-fde2-4cdf-88f0-bf63d616f3af",
+      "set": "ecl",
+      "number": "81",
+      "quantity": 2,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "db3b294a-87b1-4dda-b1f6-ea63a9722faf",
+      "name": "Urza's Rebuff",
+      "scryfall_id": "8a6f90b3-450c-490a-b6d0-2393c4646c85",
+      "set": "bro",
+      "number": "71",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "6c0f6673-bc24-4c84-b4e7-736283ffd60e",
+      "name": "Wanderwine Distracter",
+      "scryfall_id": "cbf593a7-d4ae-4771-926a-3c1b2c8c901a",
+      "set": "ecl",
+      "number": "82",
+      "quantity": 2,
+      "role": "",
+      "status": "assigned"
+    },
+    {
+      "oracle_id": "dd1a4219-437b-494f-ae0e-1d3181ffcd63",
+      "name": "Wild Unraveling",
+      "scryfall_id": "01522fec-9136-4fa6-91a3-370a8bb08b42",
+      "set": "ecl",
+      "number": "84",
+      "quantity": 1,
+      "role": "",
+      "status": "assigned"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+.DS_Store
+__pycache__/
+*.pyc
+.venv/
+
+# Derived: rebuildable in full from data/ via `./mtg rebuild`.
+collection.db
+
+# Generated output: gallery, deck exports, downloaded art.
+build/
+
+# Scryfall caches of public API data. Both are rebuildable:
+#   cards.json     ~9 MB, refetched in ~25s by `mtg import`
+#   art_tags.json  ~5 MB of global Tagger data, refetched by `mtg arttags`
+# Committing either would churn the repo by megabytes on every refresh.
+data/scryfall/cards.json
+data/scryfall/art_tags.json
