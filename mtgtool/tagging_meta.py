@@ -19,18 +19,56 @@ from . import vocab
 
 # MTG creature/land subtype -> our `subject` tag.
 SUBTYPE_SUBJECT = {
-    "Cat": "cat", "Dog": "dog", "Hound": "dog", "Wolf": "wolf", "Werewolf": "wolf",
-    "Bird": "bird", "Phoenix": "bird", "Rat": "rat", "Mouse": "rat",
-    "Frog": "frog", "Bat": "bat", "Squirrel": "squirrel", "Fish": "fish",
-    "Whale": "fish", "Shark": "fish", "Insect": "insect", "Wasp": "insect",
-    "Spider": "spider", "Snake": "snake", "Serpent": "snake", "Hydra": "snake",
-    "Horse": "horse", "Pegasus": "horse", "Unicorn": "horse", "Bear": "bear",
-    "Octopus": "octopus", "Squid": "octopus", "Dragon": "dragon",
-    "Human": "human", "Elf": "elf", "Goblin": "goblin", "Zombie": "zombie",
-    "Skeleton": "skeleton", "Angel": "angel", "Demon": "demon", "Devil": "demon",
-    "Construct": "robot", "Robot": "robot", "Golem": "robot", "Assembly-Worker": "robot",
+    # Mammals
+    "Cat": "cat", "Dog": "dog", "Hound": "dog", "Wolf": "wolf",
+    "Werewolf": "werewolf", "Bear": "bear", "Horse": "horse",
+    "Pegasus": "pegasus", "Unicorn": "unicorn", "Deer": "deer", "Elk": "elk",
+    "Boar": "boar", "Pig": "pig", "Goat": "goat", "Sheep": "sheep",
+    "Ox": "cow", "Cow": "cow", "Rabbit": "rabbit", "Raccoon": "raccoon",
+    "Squirrel": "squirrel", "Mouse": "mouse", "Hamster": "mouse", "Rat": "rat",
+    "Bat": "bat", "Otter": "otter", "Badger": "badger", "Weasel": "weasel",
+    "Ferret": "ferret", "Beaver": "beaver", "Hedgehog": "hedgehog",
+    "Monkey": "monkey", "Ape": "ape", "Elephant": "elephant", "Rhino": "rhino",
+    "Camel": "camel", "Mole": "mouse",
+    # Birds
+    "Bird": "bird", "Owl": "owl", "Crow": "crow", "Raven": "crow",
+    "Eagle": "eagle", "Hawk": "hawk", "Phoenix": "phoenix", "Griffin": "griffon",
+    "Griffon": "griffon",
+    # Water and reptiles
+    "Fish": "fish", "Shark": "shark", "Whale": "whale", "Octopus": "octopus",
+    "Squid": "octopus", "Crab": "crab", "Lobster": "crab", "Turtle": "turtle",
+    "Frog": "frog", "Salamander": "lizard", "Lizard": "lizard",
+    "Dinosaur": "dinosaur", "Snake": "snake", "Serpent": "serpent",
+    "Hydra": "hydra", "Kraken": "kraken", "Leviathan": "kraken",
+    "Merfolk": "merfolk",
+    # Small things
+    "Insect": "insect", "Wasp": "insect", "Bee": "insect", "Moth": "insect",
+    "Spider": "spider", "Scorpion": "spider", "Worm": "worm", "Slug": "worm",
+    "Snail": "worm",
+    # People and folk
+    "Human": "human", "Elf": "elf", "Goblin": "goblin", "Orc": "orc",
+    "Dwarf": "dwarf", "Gnome": "gnome", "Kobold": "kobold", "Giant": "giant",
+    "Troll": "troll", "Ogre": "ogre", "Minotaur": "minotaur",
+    "Centaur": "centaur", "Satyr": "satyr", "Faerie": "faerie",
+    "Vampire": "vampire",
+    # Undead and spirits
+    "Zombie": "zombie", "Skeleton": "skeleton", "Spirit": "spirit",
+    "Ghost": "ghost", "Wraith": "wraith", "Specter": "wraith",
+    "Shade": "wraith", "Mummy": "mummy",
+    # Celestial and infernal
+    "Angel": "angel", "Demon": "demon", "Devil": "devil", "Imp": "imp",
+    "Sphinx": "sphinx",
+    # Dragons and big beasts
+    "Dragon": "dragon", "Drake": "drake", "Wyvern": "wyvern", "Wurm": "wurm",
+    "Beast": "beast",
+    # Artificial and alien
+    "Construct": "construct", "Golem": "golem", "Robot": "robot",
+    "Assembly-Worker": "robot", "Servo": "robot", "Thopter": "robot",
     "Alien": "alien", "Eldrazi": "alien", "Phyrexian": "alien",
-    "Plant": "plant-creature", "Treefolk": "plant-creature", "Fungus": "plant-creature",
+    "Elemental": "elemental", "Ooze": "ooze", "Slime": "ooze",
+    # Plants
+    "Plant": "plant-creature", "Treefolk": "treefolk", "Fungus": "fungus",
+    "Saproling": "fungus",
 }
 
 # Land subtype -> `setting`. A Swamp is painted as a swamp.

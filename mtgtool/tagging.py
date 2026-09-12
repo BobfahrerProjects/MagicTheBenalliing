@@ -51,29 +51,47 @@ has no tag, put a short phrase in "other".
 
 Guidance:
 - Multiple tags per facet are fine. Use only what is clearly present.
-- "subject": creatures or characters actually visible. Use "no-creature" when the \
-art shows no living figure.
 - "mood": how the picture feels. "cute" is for genuinely endearing art -- small \
 round creatures, soft faces, playful scenes -- not merely pleasant art.
+- "palette": the dominant colour character of the image.
+- "style": how it is painted, not what it depicts.
 - "franchise": only when the art unmistakably belongs to a named crossover \
 (Warhammer 40,000, Lord of the Rings, Fallout, Final Fantasy, Marvel, Doctor Who, \
-Stardew Valley, and so on). Use "none" when it is ordinary Magic art. Do not guess \
-from art style alone.
+Stardew Valley, Avatar: The Last Airbender, and so on). Use "none" for ordinary \
+Magic art. Do not guess from art style alone -- an anime look is not a franchise.
 - "description": one plain sentence naming what is depicted, concrete enough to \
-search later. For example "a tabby cat in a wizard hat asleep on a stack of \
+search later. Name every animal or character you can see, including small ones in \
+the background. For example "a tabby cat in a wizard hat asleep on a stack of \
 spellbooks". No flourishes."""
 
 
-def vocabulary_block() -> str:
-    lines = []
-    for facet, tags in vocab.FACETS.items():
-        lines.append("{}: {}".format(facet, ", ".join(tags)))
-    return "\n".join(lines)
+def facets_for(full: bool = False) -> Dict[str, List[str]]:
+    """Which facets vision is asked for.
+
+    By default only what the free sources cannot supply: Scryfall Tagger already
+    covers subjects, settings and objects for most artwork, and far more reliably
+    than a model would, because humans tagged it. Asking again would cost money to
+    get a second opinion we did not need.
+
+    `full=True` also asks for subject/setting/object, for artwork Scryfall has
+    never tagged.
+    """
+    wanted = list(vocab.VISION_FACETS) + ["franchise"]
+    if full:
+        wanted = ["subject", "setting", "object"] + wanted
+    out = {}
+    for facet in wanted:
+        out[facet] = vocab.VISION_ONLY_TAGS.get(facet) or vocab.FACETS[facet]
+    return out
 
 
-def schema() -> dict:
+def vocabulary_block(facets: Dict[str, List[str]]) -> str:
+    return "\n".join("{}: {}".format(f, ", ".join(t)) for f, t in facets.items())
+
+
+def schema(facets: Dict[str, List[str]]) -> dict:
     properties = {}
-    for facet, tags in vocab.FACETS.items():
+    for facet, tags in facets.items():
         properties[facet] = {
             "type": "array",
             "items": {"type": "string", "enum": list(tags)},
@@ -83,7 +101,7 @@ def schema() -> dict:
     return {
         "type": "object",
         "properties": properties,
-        "required": list(vocab.FACETS) + ["description", "other"],
+        "required": list(facets) + ["description", "other"],
         "additionalProperties": False,
     }
 
@@ -154,8 +172,9 @@ def _image_block(unit: ArtUnit, embed: bool) -> dict:
             "source": {"type": "base64", "media_type": "image/jpeg", "data": data}}
 
 
-def build_request(unit: ArtUnit, embed: bool = False) -> dict:
+def build_request(unit: ArtUnit, embed: bool = False, full: bool = False) -> dict:
     """One batch entry. The vocabulary prefix is cached across the whole batch."""
+    facets = facets_for(full)
     return {
         "custom_id": unit.illustration_id,
         "params": {
@@ -163,12 +182,12 @@ def build_request(unit: ArtUnit, embed: bool = False) -> dict:
             "max_tokens": 1024,
             "system": [{
                 "type": "text",
-                "text": SYSTEM.format(vocabulary=vocabulary_block()),
+                "text": SYSTEM.format(vocabulary=vocabulary_block(facets)),
                 "cache_control": {"type": "ephemeral"},
             }],
             "output_config": {
                 "effort": "low",
-                "format": {"type": "json_schema", "schema": schema()},
+                "format": {"type": "json_schema", "schema": schema(facets)},
             },
             "messages": [{
                 "role": "user",
@@ -192,10 +211,11 @@ def _client():
     return anthropic.Anthropic()
 
 
-def submit(conn, units: List[ArtUnit], embed: bool = False) -> str:
+def submit(conn, units: List[ArtUnit], embed: bool = False,
+           full: bool = False) -> str:
     """Send a batch and return its id. The id is also written to build/."""
     client = _client()
-    requests = [build_request(unit, embed) for unit in units]
+    requests = [build_request(unit, embed, full) for unit in units]
     batch = client.messages.batches.create(requests=requests)
     paths.ensure_dirs()
     with open(os.path.join(paths.BUILD, "batch.json"), "w", encoding="utf-8") as fh:

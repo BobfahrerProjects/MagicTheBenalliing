@@ -15,7 +15,7 @@ import os
 import urllib.request
 from typing import Dict, List
 
-from . import db, decks, paths, search, value, vocab
+from . import db, decks, paths, scryfall_tags, search, value, vocab
 
 PAGE = """<!doctype html>
 <html lang="en">
@@ -52,9 +52,11 @@ button { background:var(--chip); color:var(--ink); border:1px solid var(--line);
 button:hover { border-color:var(--accent); }
 button.on { background:var(--accent); color:#fff; border-color:var(--accent); }
 .facets { display:none; gap:14px; flex-wrap:wrap; margin-top:10px;
-  border-top:1px solid var(--line); padding-top:10px; }
+  border-top:1px solid var(--line); padding-top:10px;
+  max-height:46vh; overflow-y:auto; }
 .facets.show { display:flex; }
-.facet { min-width:150px; }
+.facet { min-width:150px; max-width:260px; }
+.facet .tags { max-height:132px; overflow-y:auto; }
 .facet h4 { margin:0 0 5px; font-size:11px; text-transform:uppercase;
   letter-spacing:.06em; color:var(--muted); }
 .tags { display:flex; flex-wrap:wrap; gap:4px; }
@@ -216,7 +218,7 @@ function buildFacets() {
   for (const [facet, tags] of Object.entries(FACETS)) {
     const counts = {};
     CARDS.forEach(c => c.tags.forEach(t => { if (tags.includes(t)) counts[t] = (counts[t]||0)+1; }));
-    const present = tags.filter(t => counts[t]);
+    const present = tags.filter(t => counts[t]).sort((a,b) => counts[b]-counts[a]);
     if (!present.length) continue;
     const div = document.createElement("div");
     div.className = "facet";
@@ -388,15 +390,17 @@ def build(conn, out_path: str = None, offline_art: bool = False, log=print) -> s
         claims[deck.name] = entry
 
     valuation = value.value_collection(conn)
-    tagged = conn.execute("SELECT COUNT(*) AS n FROM art_notes").fetchone()["n"]
-    total_art = conn.execute(
-        "SELECT COUNT(DISTINCT illustration_id) AS n FROM card_faces").fetchone()["n"]
+    # Report tag coverage by source: "tagged" used to mean only the vision pass,
+    # which read as 0% even with thousands of free tags already applied.
+    cov = scryfall_tags.coverage(conn)
+    tag_bits = "{:,}/{:,} artworks tagged".format(cov["any"], cov["total"])
+    if cov["vision"] < cov["total"]:
+        tag_bits += " ({:,} awaiting vision)".format(cov["total"] - cov["vision"])
 
     subtitle = ("{:,} real cards worth EUR {:,.2f} &middot; {:,} proxies excluded "
-                "&middot; {:,} wishlist cards ignored &middot; {}/{} artworks tagged"
+                "&middot; {:,} wishlist cards ignored &middot; {}"
                 ).format(valuation.real.cards, valuation.real.value,
-                         valuation.proxy.cards, valuation.wishlist.cards,
-                         tagged, total_art)
+                         valuation.proxy.cards, valuation.wishlist.cards, tag_bits)
 
     html = (PAGE
             .replace("__TITLE__", "MagicTheBenalliing")

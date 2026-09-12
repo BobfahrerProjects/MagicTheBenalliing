@@ -12,7 +12,7 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from mtgtool import (db, decks, gallery, identity, importer, invariants,  # noqa: E402
-                     manabox, paths, search, tagging, value)
+                     manabox, paths, search, scryfall_tags, tagging, value)
 
 
 def die(message: str, code: int = 2):
@@ -134,7 +134,7 @@ def cmd_tag(args, conn):
         if answer not in ("y", "yes"):
             print("Not submitted.")
             return
-        batch_id = tagging.submit(conn, units, embed=args.embed)
+        batch_id = tagging.submit(conn, units, embed=args.embed, full=args.full)
         print("Submitted batch {} ({} artworks).".format(batch_id, len(units)))
         print("Check with:  ./mtg tag --status --batch {}".format(batch_id))
         print("Collect with: ./mtg tag --collect")
@@ -146,6 +146,32 @@ def cmd_tag(args, conn):
         print("First few queued:")
         for unit in units[:8]:
             print("  {}".format(unit.example_card))
+
+
+def cmd_arttags(args, conn):
+    """Import community art tags from Scryfall Tagger. Free."""
+    try:
+        cache = scryfall_tags.fetch_all(refresh=args.refresh)
+    except scryfall_tags.Throttled:
+        die("Scryfall is throttling. Progress is cached -- just run this again.", 1)
+    result = scryfall_tags.apply(conn, cache)
+    print()
+    print("Applied {:,} art tag(s) to {:,} of {:,} artworks ({:.0f}%).".format(
+        result["tags"], result["artworks_covered"], result["artworks_total"],
+        100.0 * result["artworks_covered"] / max(1, result["artworks_total"])))
+    for facet, count in sorted(result["per_facet"].items(), key=lambda kv: -kv[1]):
+        print("  {:<12s} {:,}".format(facet, count))
+    print()
+    cov = scryfall_tags.coverage(conn)
+    print("COVERAGE  {:,} of {:,} artworks have at least one tag".format(
+        cov["any"], cov["total"]))
+    for source in ("metadata", "scryfall", "vision"):
+        print("  {:<10s} {:,}".format(source, cov[source]))
+    untagged = len(tagging.untagged(conn))
+    if untagged:
+        print()
+        print("{:,} artwork(s) still have no vision tags (mood, palette, style)."
+              .format(untagged))
 
 
 def cmd_deck(args, conn):
@@ -352,7 +378,16 @@ def build_parser():
                    help="tag only the first N artworks (use for a trial run)")
     p.add_argument("--embed", action="store_true",
                    help="upload image bytes instead of linking the Scryfall URL")
+    p.add_argument("--full", action="store_true",
+                   help="also ask vision for subject/setting/object, which Scryfall "
+                        "Tagger normally covers for free")
     p.set_defaults(func=cmd_tag)
+
+    p = sub.add_parser("arttags",
+                       help="import community art tags from Scryfall Tagger (free)")
+    p.add_argument("--refresh", action="store_true",
+                   help="refetch every tag instead of using the cache")
+    p.set_defaults(func=cmd_arttags)
 
     p = sub.add_parser("deck", help="deck plans and the one-card-one-deck rule")
     p.add_argument("action", choices=["list", "show", "new", "add", "remove",

@@ -71,38 +71,68 @@ nothing demonstrably moved), it reports acquisition rather than inventing a move
 
 ## Art tagging
 
-Metadata gives a lot away for free, at import, with no model involved: creature
-types (a "Creature — Cat Wizard" is a cat), artist, set, colour identity, rarity,
-and the Universes Beyond franchise. That is 695 tags in this collection for €0.
+Three sources, cheapest first. A model is only asked what nothing else can answer.
 
-Vision is asked only for what metadata cannot know — what is actually painted, and
-how it feels:
+**1. Card metadata — free.** Creature types from the type line (a `Creature — Cat
+Wizard` is a cat), artist, set, colour identity, rarity, and the Universes Beyond
+franchise.
 
-| Facet | Examples |
+**2. Scryfall Tagger — free.** Scryfall runs a community project that tags what is
+actually *painted* on a card, exposed through the search API as `art:<tag>`. This is
+the source that matters most for theme building, because it sees things no type line
+mentions:
+
+| | cards with a cat in the art |
 |---|---|
-| `subject` | cat, dog, frog, squirrel, dragon, robot, angel, no-creature |
-| `mood` | cute, wholesome, cozy, funny, epic, grim, horror, serene |
-| `setting` | forest, swamp, city, castle, library, battlefield, space |
-| `style` | painterly, anime, cartoon, ink-sketch, woodcut, pixel-art, storybook |
-| `composition` | portrait, close-up, wide-landscape, action, crowd, silhouette |
-| `palette` | warm, cool, monochrome, pastel, neon, earthy, dark, bright |
-| `motif` | food, music, books, fire, water, bones, flowers, treasure, moon-stars |
-| `franchise` | warhammer-40k, lord-of-the-rings, stardew-valley, fallout, marvel |
+| type line only | 14 |
+| **with Scryfall Tagger** | **58** |
 
-Plus a one-line description per artwork ("a tabby cat in a wizard hat asleep on a
-stack of spellbooks"), which is what makes free-text search work later without
-re-running vision.
+Cyclonic Rift is an Instant. Lord Windgrace is a `Planeswalker — Windgrace`. Neither
+type line contains the word "cat", and both are unmistakably cats — Tagger finds
+them, metadata never could.
+
+Two properties were verified against the live API before any of this was trusted:
+`art:` matches tag names **exactly** (`art:cat` returns 1,200 cards; `art:ca`,
+`art:cats` and `art:catt` return none), so there are no substring false positives;
+and a non-existent tag returns HTTP 404, which is distinguishable from being
+throttled. Tags whose meaning could not be confirmed were left out — `mount` returns
+Abyssal Specter, which is not ridden, so it is not mapped. A wrong tag is worse than
+a missing one.
+
+```bash
+./mtg arttags          # ~250 tags, cached and resumable; free
+```
+
+**3. Vision — paid, and only for the rest.** Scryfall covers subjects, settings and
+objects. What nobody has tagged is how a picture *feels* and how it is painted, so
+that is all the model is asked for:
+
+| Facet | Examples | Source |
+|---|---|---|
+| `subject` | cat, frog, squirrel, dragon, angel, robot, treefolk | metadata + Tagger |
+| `setting` | forest, castle, library, graveyard, tavern, volcano | Tagger |
+| `object` | sword, book, candle, mushroom, treasure, lightning | Tagger |
+| `mood` | cute, cozy, wholesome, epic, grim, menacing, serene | Tagger (partly) + vision |
+| `style` | painterly, anime, chibi, woodcut, watercolor, pixel-art | Tagger (partly) + vision |
+| `composition` | portrait, close-up, action, crowd, silhouette | Tagger (partly) + vision |
+| `palette` | warm, cool, pastel, neon, monochrome, dark | **vision only** |
+| `franchise` | warhammer-40k, stardew-valley, fallout, marvel | metadata + vision |
+
+Narrowing the prompt to the uncovered facets cut it from 3,701 to 2,031 characters,
+so the vision pass is both cheaper and more focused. Vision also writes a one-line
+description per artwork ("a tabby cat in a wizard hat asleep on a stack of
+spellbooks"), which is what makes free-text search work without re-running it.
 
 The vocabulary is **closed** on purpose. Free-text tagging reliably yields
 cat/cats/feline/kitty for the same picture, and then searching for "cat" silently
-misses most of them. Anything the model thinks is important but missing goes into
+misses most of them. Anything the model considers important but missing goes into
 `other` for review.
 
-**Cost.** The unit of work is an *artwork*, not a row: 2,152 rows collapse to 1,775
+**Cost.** The unit of work is an *artwork*, not a row: rows collapse to ~1,790
 distinct illustrations, and reprints inherit the tags of the art they share. The
-image sent is Scryfall's `art_crop` — the painting alone, 626×457, ~381 image
-tokens, no frame or rules text. Via the Batch API with Claude Opus 5 that is about
-**€4.60 once** for the whole collection, and pennies for each new batch of cards.
+image is Scryfall's `art_crop` — the painting alone, 626×457, ~381 image tokens, no
+frame or rules text. Via the Batch API with Claude Opus 5 that is about **€4.60
+once**, and pennies per new batch.
 
 ```bash
 ./mtg tag --dry-run              # how many artworks, and what it will cost
@@ -111,7 +141,8 @@ python3 -m venv .venv && .venv/bin/pip install anthropic
 .venv/bin/python mtg tag --collect
 ```
 
-Always run `--limit 20` first and read the results before spending the full batch.
+Add `--full` to also ask vision for subject/setting/object — worth it only for
+artwork Scryfall has never tagged.
 
 ---
 
@@ -159,6 +190,7 @@ makes that claim true rather than aspirational.
 | `mtg import <csv>` | stage a snapshot, diff it, enrich from Scryfall | free |
 | `mtg value` | collection worth, proxies and wishlists excluded | free |
 | `mtg find [text]` | search by art tag, colour, type, availability | free |
+| `mtg arttags` | import community art tags from Scryfall Tagger | free |
 | `mtg tag --dry-run` | count artworks needing tags and estimate cost | free |
 | `mtg tag --submit / --collect` | run the vision batch | ~€4.60 once |
 | `mtg deck seed` | create deck plans from the decks already in ManaBox | free |

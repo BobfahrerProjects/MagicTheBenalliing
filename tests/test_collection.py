@@ -12,7 +12,7 @@ import helpers  # noqa: E402
 from helpers import BIRD, SOL_A, SOL_B, STUDY, Sandbox, row  # noqa: E402
 
 from mtgtool import (decks, identity, importer, manabox,  # noqa: E402
-                     paths, value)
+                     paths, scryfall_tags, search, tagging, value, vocab)
 
 
 class TestParsing(unittest.TestCase):
@@ -411,3 +411,106 @@ class TestStaging(unittest.TestCase):
                                          log=lambda *a: None)
 
             self.assertEqual(importer.summarise(result["changes"]), {"added": 4})
+
+
+class TestScryfallArtTags(unittest.TestCase):
+    """Community art tags: the source that finds a cat no type line mentions."""
+
+    def setUp(self):
+        self.box = Sandbox().__enter__()
+        self.conn = self.box.conn()
+        importer.run_import(self.conn, self.box.csv(), offline=True, log=lambda *a: None)
+
+    def tearDown(self):
+        self.box.__exit__(None, None, None)
+
+    def _illus(self, scryfall_id):
+        return self.conn.execute(
+            "SELECT illustration_id FROM card_faces WHERE scryfall_id = ?",
+            (scryfall_id,)).fetchone()["illustration_id"]
+
+    def test_a_cat_in_the_art_is_tagged_even_with_no_cat_in_the_type_line(self):
+        """Rhystic Study is an Enchantment. Metadata can never call it a cat."""
+        study_art = self._illus(STUDY)
+        before = {r["tag"] for r in self.conn.execute(
+            "SELECT tag FROM art_tags WHERE illustration_id = ?", (study_art,))}
+        self.assertNotIn("cat", before)
+
+        scryfall_tags.apply(self.conn, {"cat": [study_art]})
+        after = {r["tag"] for r in self.conn.execute(
+            "SELECT tag FROM art_tags WHERE illustration_id = ?", (study_art,))}
+        self.assertIn("cat", after)
+
+    def test_tags_for_artwork_we_do_not_own_are_ignored(self):
+        scryfall_tags.apply(self.conn, {"cat": ["not-in-this-collection"]})
+        leaked = self.conn.execute(
+            "SELECT COUNT(*) AS n FROM art_tags WHERE source = 'scryfall'").fetchone()["n"]
+        self.assertEqual(leaked, 0)
+
+    def test_unmapped_scryfall_tags_are_skipped_not_invented(self):
+        """A Scryfall tag with no place in our vocabulary must not create one."""
+        art = self._illus(STUDY)
+        scryfall_tags.apply(self.conn, {"some-tag-we-never-mapped": [art]})
+        rows = self.conn.execute(
+            "SELECT COUNT(*) AS n FROM art_tags WHERE source = 'scryfall'").fetchone()["n"]
+        self.assertEqual(rows, 0)
+
+    def test_applying_twice_is_idempotent(self):
+        art = self._illus(STUDY)
+        scryfall_tags.apply(self.conn, {"cat": [art], "cozy": [art]})
+        first = self.conn.execute(
+            "SELECT COUNT(*) AS n FROM art_tags WHERE source='scryfall'").fetchone()["n"]
+        scryfall_tags.apply(self.conn, {"cat": [art], "cozy": [art]})
+        second = self.conn.execute(
+            "SELECT COUNT(*) AS n FROM art_tags WHERE source='scryfall'").fetchone()["n"]
+        self.assertEqual(first, second)
+        self.assertEqual(first, 2)
+
+    def test_every_mapped_tag_lands_in_the_vocabulary(self):
+        """Guards against a mapping typo silently producing an invalid tag."""
+        for scry_tag, (facet, tag) in vocab.SCRYFALL_MAP.items():
+            self.assertTrue(vocab.is_valid(facet, tag),
+                            "{} maps to {}/{} which is not in the vocabulary"
+                            .format(scry_tag, facet, tag))
+
+    def test_search_finds_cards_by_an_art_tag(self):
+        art = self._illus(STUDY)
+        scryfall_tags.apply(self.conn, {"cat": [art]})
+        hits = search.find(self.conn, tags=["cat"])
+        self.assertEqual([h.name for h in hits], ["Rhystic Study"])
+
+    def test_coverage_reports_what_is_still_untagged(self):
+        art = self._illus(STUDY)
+        scryfall_tags.apply(self.conn, {"cat": [art]})
+        cov = scryfall_tags.coverage(self.conn)
+        self.assertEqual(cov["scryfall"], 1)
+        self.assertLess(cov["scryfall"], cov["total"])
+
+
+class TestVisionScope(unittest.TestCase):
+
+    def test_default_vision_prompt_skips_what_scryfall_covers(self):
+        facets = tagging.facets_for(full=False)
+        self.assertNotIn("subject", facets)
+        self.assertNotIn("setting", facets)
+        self.assertIn("mood", facets)
+        self.assertIn("palette", facets)
+
+    def test_full_vision_prompt_covers_everything(self):
+        facets = tagging.facets_for(full=True)
+        for expected in ("subject", "setting", "object", "mood", "palette"):
+            self.assertIn(expected, facets)
+
+    def test_the_focused_prompt_is_materially_smaller(self):
+        small = tagging.vocabulary_block(tagging.facets_for(False))
+        large = tagging.vocabulary_block(tagging.facets_for(True))
+        self.assertLess(len(small), len(large) * 0.7)
+
+    def test_schema_enums_only_allow_vocabulary_tags(self):
+        schema = tagging.schema(tagging.facets_for(True))
+        for facet, spec in schema["properties"].items():
+            if spec.get("type") != "array" or "enum" not in spec.get("items", {}):
+                continue
+            for tag in spec["items"]["enum"]:
+                self.assertTrue(vocab.is_valid(facet, tag),
+                                "{}/{} is not in the vocabulary".format(facet, tag))

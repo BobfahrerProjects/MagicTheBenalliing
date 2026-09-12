@@ -98,13 +98,17 @@ CREATE INDEX IF NOT EXISTS faces_illus ON card_faces(illustration_id);
 
 -- Art tags hang off the artwork, never off a row, so a fresh export never
 -- disturbs them.
+-- `source` is part of the key on purpose. Two sources agreeing that an artwork
+-- shows a cat is worth recording as two rows: it keeps the per-source coverage
+-- counts honest, and lets a bad source be deleted without taking the other's
+-- tags with it. Readers de-duplicate by tag.
 CREATE TABLE IF NOT EXISTS art_tags (
     illustration_id TEXT NOT NULL,
     facet           TEXT NOT NULL,
     tag             TEXT NOT NULL,
-    source          TEXT NOT NULL,   -- metadata | vision | manual
+    source          TEXT NOT NULL,   -- metadata | scryfall | vision | manual
     confidence      REAL,
-    PRIMARY KEY (illustration_id, facet, tag)
+    PRIMARY KEY (illustration_id, facet, tag, source)
 );
 CREATE INDEX IF NOT EXISTS art_tags_tag ON art_tags(tag);
 
